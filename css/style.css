@@ -280,6 +280,7 @@ a .circlebtn {
 	border-color: white;
 	border-style: solid;
 	transition: 0.3s;
+	margin-top: 20px;
 }
 
 .apply-btn:hover,
