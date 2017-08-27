@@ -15,7 +15,6 @@
     <!-- Icons
      ================================================== -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 
@@ -94,7 +93,6 @@
           <div class="linkcontainer">
             <div class="linkout"><a class="footlink" href="http://2017.swamphacks.com">Last Year's Site</a></div>
             <div class="linkout"><a class="footlink" href="team.html">Meet the Team</a></div>
-
           </div>
 
         </div>
@@ -105,6 +103,25 @@
 
 
   </body>
+
+	<!-- jQuery -->
+  <script src="js/jquery.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<script>
+
+	$(function()
+  {
+      $(".shbook").click(function()
+        {
+					$(".shbook").css("border-color", "red");
+					console.log("Clicked Book");
+					window.location.href = "book.html";
+        });
+  });
+
+	</script>
 
 
 </html>

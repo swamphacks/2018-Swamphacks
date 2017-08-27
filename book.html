@@ -9,6 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+		<link rel="stylesheet" type="text/css" href="css/ns-style-growl.css" />
 		<!-- custom demo style -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -72,12 +74,12 @@
 					</div>
 				</div>
 
-
+				<div id="tipbar">Tip: Use the arrow keys to flip pages!</div>
 
 				<nav>
 					<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
 					<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
-					<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+					<a id="bb-nav-next" onclick="showTip()" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
 					<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
 				</nav>
 
@@ -172,5 +174,29 @@
 		<script>
 				Page.init();
 		</script>
+
+		<script>
+		var firstNextTap = false;
+
+			function showTip() {
+    	// Get the snackbar DIV
+    		var x = document.getElementById("tipbar")
+
+			if (firstNextTap == false) {
+				// Add the "show" class to DIV
+				x.className = "show";
+
+			// After 3 seconds, remove the show class from DIV
+				setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+				firstNextTap = true;
+				console.log(firstNextTap)
+			} else {
+
+			}
+			}
+
+		</script>
+
 	</body>
 </html>
