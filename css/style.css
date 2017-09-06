@@ -46,6 +46,11 @@
   background: rgba(128,201,149,0.7); /* Gecko Browsers */
 }
 
+#indexbody {
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
 .header {
 	height: 80px;
 	background-color: white;
@@ -263,7 +268,7 @@ a .circlebtn {
 	height: 114px;
 	width: 240px;
 	display: inline-block;
-	margin-top: 6%;
+	margin-top: 42%;
   transition: 0.3s;
   display: inline-block;
   user-drag: none;
@@ -272,7 +277,10 @@ a .circlebtn {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -ms-user-select: none;
-	margin-top: 60px;
+}
+
+.bookcontainer {
+
 }
 
 .imgcon {
@@ -285,12 +293,27 @@ a .circlebtn {
 	padding-bottom: 50px;
 }
 
-.shbook {
-	height: 372px;
-	width: 241px;
+.rotated {
+  transform:rotate(0deg);
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+}
+
+.rotatedBefore {
 	-ms-transform: rotate(-10deg); /* IE 9 */
 	-webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
 	transform: rotate(-10deg);
+}
+
+.shbook {
+	margin-top: 20%;
+	height: 372px;
+	width: 241px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	border-width: 4px;
 	border-color: white;
 	border-style: solid;
@@ -336,6 +359,7 @@ a .circlebtn {
 }
 
 .tabletop {
+	margin-top: -80px;
 	background: #e9dfc4;
   background: -moz-linear-gradient(left, #e9dfc4 0%, #e9dfc4 1%, #ede3c8 2%, #ede3c8 24%, #ebddc3 25%, #e9dfc4 48%, #ebddc3 49%, #e6d8bd 52%, #e6d8bd 53%, #e9dbc0 54%, #e6d8bd 55%, #e6d8bd 56%, #e9dbc0 57%, #e6d8bd 58%, #e6d8bd 73%, #e9dbc0 74%, #e9dbc0 98%, #ebddc3 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #e9dfc4), color-stop(1%, #e9dfc4), color-stop(2%, #ede3c8), color-stop(24%, #ede3c8), color-stop(25%, #ebddc3), color-stop(48%, #e9dfc4), color-stop(49%, #ebddc3), color-stop(52%, #e6d8bd), color-stop(53%, #e6d8bd), color-stop(54%, #e9dbc0), color-stop(55%, #e6d8bd), color-stop(56%, #e6d8bd), color-stop(57%, #e9dbc0), color-stop(58%, #e6d8bd), color-stop(73%, #e6d8bd), color-stop(74%, #e9dbc0), color-stop(98%, #e9dbc0), color-stop(100%, #ebddc3));
