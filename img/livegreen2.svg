@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 321.2 71.4" style="enable-background:new 0 0 321.2 71.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#A3692C;}
+	.st2{fill:#68BD45;}
+	.st3{fill:#5AAC46;}
+	.st4{font-family:'Oduda-Bold';}
+	.st5{font-size:63.1176px;}
+</style>
+<path class="st0" d="M-8.5-19.1H-28c-3.4,0-6.2-2.8-6.2-6.2v-19.5c0-3.4,2.8-6.2,6.2-6.2h19.5c3.4,0,6.2,2.8,6.2,6.2v19.5
+	C-2.4-21.9-5.1-19.1-8.5-19.1z"/>
+<g>
+	<path class="st1" d="M39.6,25.5c-2.2-2.2-5.8-2.2-8,0l-20,20c-2.2,2.2-2.2,5.8,0,8c2.2,2.2,5.8,2.2,8,0l20-20
+		C41.8,31.3,41.8,27.7,39.6,25.5z"/>
+	<path class="st2" d="M23.6,17.6C27.9,13.3,41.8,9.5,51,7.4c4.1-0.9,7.7,2.7,6.8,6.8c-2.1,9.2-5.9,23.1-10.2,27.4
+		c-6.6,6.6-17.3,6.6-24,0C17,34.9,17,24.2,23.6,17.6z"/>
+	<path class="st3" d="M39.6,25.5c-2.2-2.2-5.8-2.2-8,0L20.3,36.8c0.8,1.7,1.9,3.3,3.3,4.7c1.4,1.4,3,2.5,4.7,3.3l11.3-11.3
+		C41.8,31.3,41.8,27.7,39.6,25.5z"/>
+</g>
+<text transform="matrix(1 0 0 1 68.4312 52.627)"><tspan x="0" y="0" class="st2 st4 st5">live</tspan><tspan x="91.3" y="0" class="st3 st4 st5">green</tspan></text>
+<circle class="st3" cx="89.4" cy="13.5" r="5.9"/>
+</svg>

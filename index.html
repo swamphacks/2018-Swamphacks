@@ -6,20 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Swamphacks 2018</title>
 		<meta name="description" content="Florida's Premiere Hackathon" />
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
 		<!-- custom demo style -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-
+		<script src="js/modernizr.custom.js"></script>
     <!-- Icons
      ================================================== -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
 	</head>
 	<body id="indexbody">
 
-    <!-- <section class="header">
-      <div class="col-md-12 foot linkfoot">
+    <section class="header">
+      <div class="col-md-12 head linkfoot">
 
         <div class="linkcontainer">
           <div class="linkout"><a class="footlink" href="#">A Link</a></div>
@@ -28,7 +30,61 @@
         </div>
 
       </div>
-    </section> -->
+    </section>
+
+		<div class="fullscreen">
+			<div class="bb-custom-wrapper" id="book-1">
+				<div class="bb-bookblock">
+					<div class="bb-item">
+						<div class="bb-custom-side page-layout-3">
+							<div>
+								<h3>Portraits</h3>
+								<p>Photography (1999 &ndash; 2013)</p>
+							</div>
+						</div>
+						<div class="bb-custom-side page-layout-3">
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side page-layout-1">
+							<h3>
+								Chapter 9 <span>Nomadic Lifestyle</span>
+							</h3>
+						</div>
+						<div class="bb-custom-side page-layout-1">
+							<p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake candy canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o marzipan cookie.</p>
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side page-layout-2">
+							<div>
+								<h3>Aa</h3>
+								<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
+							</div>
+							<div>
+								<h3>Bb</h3>
+								<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
+							</div>
+						</div>
+						<div class="bb-custom-side page-layout-2">
+							<div>
+								<h3>Cc</h3>
+								<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
+							</div>
+							<div>
+								<h3>Dd</h3>
+								<p>Faworki marzipan sugar plum jelly-o marzipan. Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- /bb-bookblock -->
+				<nav>
+					<a href="#" class="bb-nav-prev">Previous</a>
+					<a href="#" class="bb-nav-next">Next</a>
+					<a href="#" class="bb-nav-close">Close</a>
+				</nav>
+			</div><!-- /bb-custom-wrapper -->
+		</div>
 
     <section class="tabletop">
       <div class="container">
@@ -44,14 +100,110 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="imgcon bookcontainer">
-              <img id="bookprev" class="shbook rotatedBefore" src="img/shbook.png"></img>
-            </div>
+            <!-- <div class="imgcon bookcontainer"> -->
+              <!-- <img id="bookprev" class="shbook rotatedBefore" src="img/shbook.png"></img> -->
+							<div id="bookshelf" class="bookshelf">
+							<figure id="bookhome">
+								<div class="book shbook rotatedBefore" data-book="book-1"></div>
+								<div class="buttons"><a href="#" onclick="openBook()">Look inside</a><a href="">Details</a></div>
+								<figcaption><h2 class="bookfig">9 Lives <span>Andrew Hudson</span></h2></figcaption>
+								<div class="details">
+									<ul>
+										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua.</li>
+										<li>Graham Press</li>
+										<li>12.09.2010</li>
+										<li>397 pages</li>
+									</ul>
+								</div>
+							</figure>
+							</div>
+            <!-- </div> -->
           </div>
 
         </div>
       </div>
 
+    </section>
+
+		<section id="sponsors">
+			<div class="container">
+        <div class="row">
+      		<div class="col-md-12">
+						<h1 id="spheader">Sponsors</h1>
+						<p id="spcap">University of Florida | January 19-21, 2018</p>
+      		</div>
+				</div>
+
+				<div class="row sp-row">
+      		<div class="col-md-12">
+						<div class="imgcongen">
+							<img id="microsoftimg" class="big-sp hvr-bob" src="img/microsoft.svg"></img>
+						</div>
+      		</div>
+				</div>
+
+				<div class="row sp-row">
+      		<div class="col-md-4">
+						<div class="imgcongen">
+							<img id="fbimg" class="med-sp hvr-bob" src="img/facebook.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-4">
+						<div class="imgcongen">
+							<img id="googleimg" class="med-sp hvr-bob" src="img/google.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-4">
+						<div class="imgcongen">
+							<img id="amazonimg" class="med-sp hvr-bob" src="img/amazon.svg"></img>
+						</div>
+      		</div>
+				</div>
+
+				<div class="row sp-row">
+      		<div class="col-md-4">
+						<div class="imgcongen">
+							<img id="bloomimg" class="med-sp hvr-bob" src="img/bloomberg.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-4">
+						<div class="imgcongen">
+							<img id="capitalimg" class="med-sp hvr-bob" src="img/capitalone.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-4">
+						<div class="imgcongen">
+							<img id="livegreenimg" class="med-sp hvr-bob" src="img/livegreen2.svg"></img>
+						</div>
+      		</div>
+				</div>
+
+				<div class="row bottom-row">
+      		<div class="col-md-3">
+						<div class="imgcongen">
+							<img id="airimg" class="sm-sp hvr-bob" src="img/airbnb.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-3">
+						<div class="imgcongen">
+							<img id="twitterimg" class="sm-sp hvr-bob" src="img/twitter.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-3">
+						<div class="imgcongen">
+							<img id="nvidiaimg" class="sm-sp hvr-bob" src="img/nvidia.svg"></img>
+						</div>
+      		</div>
+					<div class="col-md-3">
+						<div class="imgcongen">
+							<img id="techimg" class="sm-sp hvr-bob" src="img/techcrunch.svg"></img>
+						</div>
+      		</div>
+				</div>
+
+
+			</div>
     </section>
 
     <section id="footer">
@@ -101,12 +253,13 @@
 
   </section>
 
-
+	<script src="js/bookblock.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/bookshelf.js"></script>
   </body>
 
 	<!-- jQuery -->
   <script src="js/jquery.js"></script>
-	<script src="js/modernizr.custom.js"></script>
 	<script src="js/jquery-3.2.1.min.js"></script>
 
 	<script>
@@ -127,9 +280,22 @@
         });
   });
 
+	function openBook() {
+		//$('.header').addClass('small-header');
+		$(".header").css("height", "60px");
+		$(".head").css("height", "60px");
+		$(".tabletop").addClass("book-open-tabletop");
+
+		slideFade($('#logo'));
+		slideFade($('#mainheader'));
+		slideFade($('#headercaption'));
+		$('.shbook').removeClass('rotatedBefore');
+		$('.shbook').addClass('rotated');
+	}
+
 	function slideFade(elem)
 	{
-   	var fade = { opacity: 0, transition: 'opacity 0.4s' };
+   	var fade = { opacity: 0, transition: "opacity 0.4s" };
    	elem.css(fade).slideUp();
   }
 
