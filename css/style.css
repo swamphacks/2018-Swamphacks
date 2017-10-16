@@ -10,6 +10,16 @@
 }
 
 @font-face {
+    font-family: "Playfair-Display-Italic";
+    src: url(../fonts/PlayfairDisplay-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "DroidSerif-Regular";
+    src: url(../fonts/DroidSerif-Regular.ttf) format("truetype");
+}
+
+@font-face {
     font-family: "Quicksand";
     src: url(../fonts/Quicksand-Regular.ttf) format("truetype");
 }
@@ -71,13 +81,14 @@
 
 .header {
 	transition: 0.3s;
-	height: 80px;
+	position: absolute;
+	height: 60px;
 	background-color: white;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	width: 100%;
 	left: 0;
-	top: 0;
+	top: -60px;
 }
 
 .foot {
@@ -85,7 +96,7 @@
 }
 
 .head {
-  height: 80px;
+  height: 60px;
 	transition: 0.3s;
 }
 
@@ -289,14 +300,14 @@ a .circlebtn {
 }
 @-webkit-keyframes hvr-bob-float {
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
   }
 }
 @keyframes hvr-bob-float {
   100% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
   }
 }
 .hvr-bob {
@@ -311,6 +322,23 @@ a .circlebtn {
   animation-name: hvr-bob-float, hvr-bob;
   -webkit-animation-duration: .3s, 1.5s;
   animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+.float-up {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 2s;
+  animation-duration: .3s, 2s;
   -webkit-animation-delay: 0s, .3s;
   animation-delay: 0s, .3s;
   -webkit-animation-timing-function: ease-out, ease-in-out;
@@ -478,7 +506,6 @@ a .circlebtn {
 	height: 114px;
 	width: 240px;
 	display: inline-block;
-	margin-top: 28%;
   transition: 0.3s;
   display: inline-block;
   user-drag: none;
@@ -487,6 +514,11 @@ a .circlebtn {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -ms-user-select: none;
+	margin-top: 35%;
+}
+
+.bookrow {
+
 }
 
 .bookcontainer {
@@ -529,6 +561,10 @@ a .circlebtn {
 
 .buttons {
 	margin-top: 40px;
+}
+
+.bookshelf {
+	margin-top: 15%;
 }
 
 .shbook {
@@ -581,14 +617,14 @@ a .circlebtn {
 }
 
 .tabletop {
-	height: 85%;
+	height: 95%;
 	transition: 0.3s;
 }
 
 .book-open-tabletop {
-	height: -moz-calc(100% - 55px);
-	height: -webkit-calc(100% - 55px);
-	height: calc(100% - 55px);
+	height: -moz-calc(100% - 0px);
+	height: -webkit-calc(100% - 0px);
+	height: calc(100% - 0px);
 }
 
 .center-line {
@@ -653,7 +689,6 @@ a .circlebtn {
 	float: left;
 	height: 100%;
 	overflow: hidden;
-	background: #fff;
 	/* Centering with flexbox */
 	/*display: -webkit-box;
 	display: -moz-box;
@@ -783,4 +818,411 @@ a .circlebtn {
 	.bb-custom-side {
 		font-size: 60%;
 	}
+}
+
+.imgcontainer .floating-island {
+	width: 90%;
+  height: 100%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	object-fit: contain;
+
+}
+
+.apply-page {
+	background: #FDFDEF !important;
+}
+
+.office-pic {
+	height: 130%;
+	display: flex;
+	align-items: left;
+	justify-content: left;
+	object-fit: contain;
+
+}
+
+.imgcontainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+@keyframes MoveUpDown {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -4%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+#poem-view {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+}
+
+.poem-txt {
+	height: 100%;
+  font-size: 18px;
+	line-height: 28px;
+	width: 100%;
+	text-align: center;
+	font-family: 'DroidSerif-Regular';
+	padding: 30px !important;
+}
+
+.poem-title {
+	color: #333333;
+  font-size: 36px;
+	font-family: 'Playfair-Display-Italic' !important;
+}
+
+.poemT {
+	width: 100%;
+	text-align: center;
+	margin-top: -40px;
+	font-style: italic;
+	padding: 0px;
+	font-size: 36px;
+	font-family: 'Playfair-Display-Italic' !important;
+}
+
+.fs-title {
+	margin-left: 50px !important;
+	padding-left: 0px !important;
+}
+
+.bb-nav-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+
+#formbody {
+	height: 100%;
+	width: 100%;
+
+}
+
+.fs-field-label {
+	color: #4FACDC;
+}
+
+.heron-pic {
+	position: absolute;
+	top: -20px;
+	left: -15px;
+	width: auto;
+	height: 200px;
+}
+
+.bbsidebor {
+	border-right: 0.5px solid lightgrey;
+}
+
+.fs-form {
+	background: blue !important;
+	margin-left: 50px !important;
+}
+
+.fs-mark {
+
+}
+
+.fs-form-wrap {
+
+}
+
+.bb-nav-next {
+	margin-bottom: 10px;
+	background: red;
+
+}
+
+.page-layout-office .floor {
+	height: 80px;
+	background: #BDCCCE;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.page-layout-office .windowpane {
+	background: #D0D7DB;
+	position: absolute;
+	bottom: 80px;
+	left: 120px;
+	width: 16px;
+	top: 0;
+}
+
+.page-layout-office .backwall {
+	background: #FDFDEF;
+	position: absolute;
+	bottom: 80px;
+	right: 0;
+	width: 180px;
+	top: 0;
+}
+
+.page-layout-office .desk {
+	height: auto;
+	position: absolute;
+	bottom: 40px;
+	left: 20px;
+	width: 60%;
+	min-width: 300px;
+}
+
+.page-layout-office .cooler {
+	height: 60%;
+	position: absolute;
+	bottom: 40px;
+	right: 30px;
+	width: auto;
+	max-height: 300px;
+}
+
+.page-layout-office .tree {
+	height: 80%;
+	position: absolute;
+	bottom: 0px;
+	right: 120px;
+	width: auto;
+}
+
+.page-layout-office .ptree {
+	height: 90px;
+	position: absolute;
+	top: 120px;
+	right: 40px;
+	width: auto;
+}
+
+.left-office {
+	background: #F8E6CF;
+}
+
+.island-back {
+	background: #CEF9FA;
+}
+
+.firstitem .page-layout-3 {
+
+}
+
+.island-back .cloud1 {
+	width: 120px;
+	height: auto;
+	position: absolute;
+	bottom: 100px;
+	left: -120px;
+}
+
+.island-back .cloud2 {
+	width: 150px;
+	height: auto;
+	position: absolute;
+	bottom: 20px;
+	left: -180px;
+}
+
+.copyright-text {
+	text-align: center;
+	width: 100%;
+	font-size: 14px;
+	line-height: 22px;
+	font-family: 'DroidSerif-Regular';
+
+}
+
+.topper {
+	margin-top: 40%;
+}
+
+.about-txt {
+	width: 100% !important;
+	text-align: center;
+	font-size: 18px;
+	line-height: 28px;
+	font-family: 'DroidSerif-Regular';
+	padding: 30px;
+}
+
+.rightislandimg {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+
+.right-island {
+	background: #CEF9FA;
+}
+
+.right-island .cloud3 {
+	width: 120px;
+	height: auto;
+	position: absolute;
+	top: 200px;
+	left: -120px;
+}
+
+.right-island .cloud4 {
+	width: 150px;
+	height: auto;
+	position: absolute;
+	top: 50px;
+	left: -180px;
+}
+
+.right-island-right {
+	overflow-y: scroll;
+}
+
+.faq-title {
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+	color: #333333;
+  font-size: 36px;
+	font-family: 'Playfair-Display-Italic' !important;
+}
+
+.faq-question {
+	font-family: 'Montserrat', serif;
+  color: #48ABE0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+	margin-top: 10px;
+	padding-left: 30px;
+}
+
+.top-fq {
+	margin-top: 40px !important;
+}
+
+.faq-txt {
+	width: 100%;
+	text-align: left;
+	font-size: 16px;
+	line-height: 26px;
+	font-family: 'DroidSerif-Regular';
+	padding: 30px;
+}
+
+.faq-txt-sh {
+	width: 100%;
+	text-align: left;
+	font-size: 16px;
+	line-height: 26px;
+	font-family: 'DroidSerif-Regular';
+	padding: 30px;
+	margin-top: 30px;
+}
+
+
+.schedule-page {
+	background: #012743;
+}
+
+.schedule-page .floor-roof {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 80px;
+	background: #BAE3EF;
+	width: 100%;
+}
+
+.schedule-page .floor-grass {
+	position: absolute;
+	left: 40%;
+	bottom: 10px;
+	height: 60px;
+	background: #004B3F;
+	width: 60%;
+	transform: skewX(-30deg);
+}
+
+.schedule-page .vending {
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	height: 60%;
+	width: auto;
+}
+
+.schedule-page .stars {
+	position: absolute;
+	left: 0;
+	top: 20px;
+	height: 120px;
+	width: auto;
+}
+
+.schedule-page .fence {
+	position: absolute;
+	left: 0;
+	bottom: 80px;
+	height: 180px;
+	width: auto;
+}
+
+@keyframes particleAnimation
+{
+    from {
+        left: -100px;
+				top: 20%;
+    }
+    to {
+        left: calc( 100% + 100px );
+				top: 6%;
+    }
+}
+
+.p {
+  position:absolute;
+  left:0px;
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:white;
+  animation-name: particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+	transform: rotateY(-40deg);
+}
+
+.p::before {
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px;
+  top:0px;
+  height:1px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%);
+}
+
+.p-2 {
+  animation-duration: 2s;
+  top: 10%;
+}
+
+.schedule-list {
+	overflow-y: scroll;
 }

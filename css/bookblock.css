@@ -20,6 +20,7 @@
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
+
 }
 
 .bb-vertical .bb-page {
@@ -49,7 +50,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #f9f7f1;
 }
 
 .bb-outer {
@@ -97,7 +98,7 @@
   z-index: 999;
 }
 
-.bb-overlay, 
+.bb-overlay,
 .bb-flipoverlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -195,11 +196,11 @@
   top: 0;
   left: 0;
   display: none;
-  background: #fff;
+  background: #f9f7f1;
 }
 
 /* No JS */
-.no-js .bb-bookblock, 
+.no-js .bb-bookblock,
 .no-js ul.bb-custom-grid li {
   width: auto;
   height: auto;
