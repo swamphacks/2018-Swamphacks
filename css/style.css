@@ -10,13 +10,13 @@
 }
 
 @font-face {
-    font-family: "Playfair-Display-Italic";
+    font-family: "Rockwell";
     src: url(../fonts/PlayfairDisplay-Italic.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "DroidSerif-Regular";
-    src: url(../fonts/DroidSerif-Regular.ttf) format("truetype");
+    font-family: "Rockwell";
+    src: url(../fonts/Rockwell.ttf) format("truetype");
 }
 
 @font-face {
@@ -47,6 +47,11 @@
 @font-face {
     font-family: "Montserrat";
     src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Rockwell";
+    src: url(../fonts/rockwen.ttf) format("truetype");
 }
 
 ::selection {
@@ -361,6 +366,15 @@ a .circlebtn {
 
   .linkcontainer {
     margin-bottom: 60px;
+  }
+
+  div {
+  	font-size: 10px;
+  	line-height: 1em;
+  }
+
+  p{
+  	font-size: 15px;
   }
 
 	#footer {
@@ -874,18 +888,18 @@ a .circlebtn {
 
 .poem-txt {
 	height: 100%;
-  font-size: 18px;
-	line-height: 28px;
+  	font-size: 18px;
+	line-height: 24px;
 	width: 100%;
-	text-align: center;
-	font-family: 'DroidSerif-Regular';
+	text-align: left;
+	font-family: 'Rockwell';
 	padding: 30px !important;
 }
 
 .poem-title {
 	color: #333333;
-  font-size: 36px;
-	font-family: 'Playfair-Display-Italic' !important;
+	font-size: 36px;
+	font-family: 'Rockwell' !important;
 }
 
 .poemT {
@@ -895,7 +909,7 @@ a .circlebtn {
 	font-style: italic;
 	padding: 0px;
 	font-size: 36px;
-	font-family: 'Playfair-Display-Italic' !important;
+	font-family: 'Rockwell' !important;
 }
 
 .fs-title {
@@ -904,7 +918,7 @@ a .circlebtn {
 }
 
 .bb-nav-close {
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
 
@@ -921,9 +935,10 @@ a .circlebtn {
 }
 
 .heron-pic {
+	animation: flyup 5s ease-in-out forwards infinite;
 	position: absolute;
 	top: -20px;
-	left: -15px;
+	left: -30px;
 	width: auto;
 	height: 200px;
 }
@@ -1045,7 +1060,7 @@ a .circlebtn {
 	width: 100%;
 	font-size: 14px;
 	line-height: 22px;
-	font-family: 'DroidSerif-Regular';
+	font-family: 'Rockwell';
 
 }
 
@@ -1053,12 +1068,16 @@ a .circlebtn {
 	margin-top: 40%;
 }
 
+.bottom {
+	margin-top: 20%;
+}
+
 .about-txt {
 	width: 100% !important;
 	text-align: justify;
 	font-size: 18px;
 	line-height: 28px;
-	font-family: 'DroidSerif-Regular';
+	font-family: 'Rockwell';
 	padding: 100px;
 }
 
@@ -1096,11 +1115,11 @@ a .circlebtn {
 
 .faq-title {
 	margin-top: 30px;
+	padding-left: 30px;
 	width: 100%;
-	text-align: center;
 	color: #333333;
-  font-size: 36px;
-	font-family: 'Playfair-Display-Italic' !important;
+  	font-size: 36px;
+	font-family: 'Rockwell' !important;
 }
 
 .faq-question {
@@ -1122,7 +1141,7 @@ a .circlebtn {
 	text-align: left;
 	font-size: 16px;
 	line-height: 26px;
-	font-family: 'DroidSerif-Regular';
+	font-family: 'Rockwell';
 	padding: 30px;
 }
 
@@ -1131,7 +1150,7 @@ a .circlebtn {
 	text-align: left;
 	font-size: 16px;
 	line-height: 26px;
-	font-family: 'DroidSerif-Regular';
+	font-family: 'Rockwell';
 	padding: 30px;
 	margin-top: 30px;
 }
@@ -1184,6 +1203,23 @@ a .circlebtn {
 	width: auto;
 }
 
+.last{
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	height: 30%;
+}
+
+.final-title{
+	margin-top: 70px;
+	padding-left: 30px;
+	width: 100%;
+	color: #333333;
+  	font-size: 36px;
+	font-family: 'Rockwell' !important;
+	text-align: center;
+}
+
 @keyframes particleAnimation
 {
     from {
@@ -1194,6 +1230,18 @@ a .circlebtn {
         left: calc( 100% + 100px );
 				top: 6%;
     }
+}
+
+@keyframes flyup {
+	 0%{
+		transform: translateX(-150%) translateY(120px) rotate(10deg);;
+	}
+	50%, 100%{
+		transform: translateX(140%) translateY(-220px) rotate(-10deg);
+	}
+	/*100%{
+		transform: translateX(-50%) translateY(0px);
+	}*/
 }
 
 .p {

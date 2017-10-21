@@ -199,6 +199,36 @@
   background: #f9f7f1;
 }
 
+.bb-custom-icon:before {
+  font-family: 'arrows';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 30px;
+  line-height: 40px;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bb-custom-icon-first:before,
+.bb-custom-icon-last:before {
+  content: "\e002";
+}
+
+.bb-custom-icon-arrow-left:before,
+.bb-custom-icon-arrow-right:before {
+  content: "\e003";
+}
+
+.bb-custom-icon-arrow-left:before,
+.bb-custom-icon-first:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 /* No JS */
 .no-js .bb-bookblock,
 .no-js ul.bb-custom-grid li {
