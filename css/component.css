@@ -399,85 +399,31 @@ body {
 
 /* Book navigation */
 
-.bb-custom-wrapper > nav a {
-    position: absolute;
+.bb-custom-wrapper > nav {
+    width: 100%;
+    height: 40px;
+    margin: 1em auto 0;
+    position: fixed;
+    bottom: 20px;
     z-index: 1000;
+    text-align: center;
+}
+
+.bb-custom-wrapper > nav a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    background: #1baede;
+    color: #fff;
     font-size: 0;
-    opacity: 0.4;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    margin: 2px;
+    text-decoration: none;
+    outline: none;
 }
 
 .bb-custom-wrapper > nav a:hover { opacity: 1 }
-
-.bb-custom-wrapper > nav a {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgba(221, 221, 221, 0.7);
-}
-
-.bb-nav-prev,
-.bb-nav-next {
-    top: 50%;
-    left: 25px;
-    margin-bottom: 10px;
-}
-
-.bb-nav-close {
-    top: 15px;
-    right: 25px;
-}
-
-.bb-nav-next {
-    right: 25px;
-    left: auto;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-.bb-custom-wrapper > nav a::before,
-.bb-custom-wrapper > nav a::after {
-    position: absolute;
-    top: 0;
-    left: 25%;
-    width: 1px;
-    height: 50%;
-    background: #333;
-    content: '';
-}
-
-.bb-custom-wrapper > nav a.bb-nav-close::before,
-.bb-custom-wrapper > nav a.bb-nav-close::after {
-    top: 15%;
-    left: 50%;
-    height: 70%;
-}
-
-.bb-custom-wrapper > nav a:not(.bb-nav-close)::before {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -webkit-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-}
-
-.bb-custom-wrapper > nav a:not(.bb-nav-close)::after {
-    top: 50%;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-
-.bb-custom-wrapper > nav a.bb-nav-close::before {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.bb-custom-wrapper > nav a.bb-nav-close::after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
 
 /****** Custom book colors and borders *****/
 
