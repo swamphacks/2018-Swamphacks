@@ -31,7 +31,7 @@
       <div class="col-md-12 head linkfoot">
 
         <div class="linkcontainer">
-          <div class="linkout"><a class="footlink" href="#">Poem</a></div>
+          <div class="linkout"><a class="footlink" href="#pg1" onclick="goPg1()">Poem</a></div>
           <div class="linkout"><a class="footlink" href="#">Application</a></div>
 					<div class="linkout"><a class="footlink" href="#">FAQ</a></div>
 					<div class="linkout"><a class="footlink" href="#">Schedule</a></div>
@@ -43,7 +43,7 @@
 		<div class="fullscreen">
 			<div class="bb-custom-wrapper" id="book-1">
 				<div class="bb-bookblock">
-					<div class="bb-item firstitem">
+					<div class="bb-item firstitem" id="pg1">
 						<div class="bb-custom-side page-layout-3 island-back">
 							<div class="imgcontainer">
 								<img class="floating-island float-up" src="img/justisland.png"></img>
@@ -311,16 +311,13 @@
       <div class="container">
         <div class="row bookrow">
 
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
             <img id="logo" src="img/logo.png"></img>
             <h1 id="mainheader">swamp<b>hacks IV</b></h1>
             <p id="headercaption">University of Florida | January 19-21, 2018</p>
-            <!-- <div id="applybtn" class="apply-btn">
-              Start your Journey
-            </div> -->
-          </div>
+          </div> -->
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <!-- <div class="imgcon bookcontainer"> -->
               <!-- <img id="bookprev" class="shbook rotatedBefore" src="img/shbook.png"></img> -->
 							<div id="bookshelf" class="bookshelf">
@@ -523,6 +520,10 @@
 		slideFade($('#headercaption'));
 		$('.shbook').removeClass('rotatedBefore');
 		$('.shbook').addClass('rotated');
+	}
+
+	function goPg1() {
+		$('#book-1').jump(1);
 	}
 
 	function slideFade(elem)
