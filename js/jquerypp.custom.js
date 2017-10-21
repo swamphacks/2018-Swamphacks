@@ -9,7 +9,7 @@
 		// selector - an optional selector to filter with, if there, matches by selector
 		//     if null, matches anything, otherwise, matches with no selector
 		findHelper = function( events, types, callback, selector ) {
-			var t, type, typeHandlers, all, h, handle, 
+			var t, type, typeHandlers, all, h, handle,
 				namespaces, namespace,
 				match;
 			for ( t = 0; t < types.length; t++ ) {
@@ -24,9 +24,9 @@
 
 				for ( h = 0; h < typeHandlers.length; h++ ) {
 					handle = typeHandlers[h];
-					
+
 					match = (all || namespace.test(handle.namespace));
-					
+
 					if(match){
 						if(selector){
 							if (handle.selector === selector  ) {
@@ -37,11 +37,11 @@
 						}
 						else if (!handle.selector ) {
 							callback(type, handle.origHandler || handle.handler);
-							
-						} 
+
+						}
 					}
-					
-					
+
+
 				}
 			}
 		};
@@ -98,7 +98,7 @@
 		return selectors;
 	};
 	event.supportTouch = "ontouchend" in document;
-	
+
 	$.fn.respondsTo = function( events ) {
 		if (!this.length ) {
 			return false;
@@ -116,7 +116,7 @@
 	 * Only attaches one event handler for all types ...
 	 * @param {Array} types llist of types that will delegate here
 	 * @param {Object} startingEvent the first event to start listening to
-	 * @param {Object} onFirst a function to call 
+	 * @param {Object} onFirst a function to call
 	 */
 	event.setupHelper = function( types, startingEvent, onFirst ) {
 		if (!onFirst ) {
@@ -197,7 +197,7 @@ var swipe = $.event.swipe = {
 	/**
 	 * @attribute delay
 	 * Delay is the upper limit of time the swipe motion can take in milliseconds.  This defaults to 500.
-	 * 
+	 *
 	 * A user must perform the swipe motion in this much time.
 	 */
 	delay : 500,
@@ -247,7 +247,7 @@ $.event.setupHelper( [
 		delegate = ev.delegateTarget || ev.currentTarget,
 		selector = ev.handleObj.selector,
 		entered = this;
-	
+
 	function moveHandler(event){
 		if ( !start ) {
 			return;
@@ -290,7 +290,7 @@ $.event.setupHelper( [
 					$.each($.event.find(delegate, events, selector), function(){
 						this.call(entered, ev, {start : start, end: stop})
 					})
-				
+
 				}
 			}
 			// reset start and stop

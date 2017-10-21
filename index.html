@@ -31,8 +31,8 @@
       <div class="col-md-12 head linkfoot">
 
         <div class="linkcontainer">
-          <div class="linkout"><a class="footlink" href="#pg1" onclick="goPg1()">Poem</a></div>
-          <div class="linkout"><a class="footlink" href="#">Application</a></div>
+          <div class="linkout"><a class="footlink" id="poemBtn">Poem</a></div>
+          <div class="linkout"><a class="footlink" href="#item2">Application</a></div>
 					<div class="linkout"><a class="footlink" href="#">FAQ</a></div>
 					<div class="linkout"><a class="footlink" href="#">Schedule</a></div>
         </div>
@@ -42,7 +42,7 @@
 
 		<div class="fullscreen">
 			<div class="bb-custom-wrapper" id="book-1">
-				<div class="bb-bookblock">
+				<div class="bb-bookblock" id="bb-bookblock">
 					<div class="bb-item firstitem" id="pg1">
 						<div class="bb-custom-side page-layout-3 island-back">
 							<div class="imgcontainer">
@@ -95,7 +95,7 @@
 						</div>
 					</div>
 
-					<div class="bb-item">
+					<div class="bb-item" id="item2">
 						<div class="bb-custom-side bbsidebor page-layout-3">
 							<div class="txtcontainer">
 								<div class="copyright-text topper">Copyright © 2018 Swamphacks</div>
@@ -471,18 +471,25 @@
 
   </section>
 
-	<script src="js/bookblock.min.js"></script>
+	<!-- jQuery -->
+  <!-- <script src="js/jquery.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<script src="js/jquerypp.custom.js"></script>
+	<!-- <script src="js/jquery.bookblock.js"></script> -->
+
+	<script src="js/bookblock.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/bookshelf.js"></script>
 
-	<script src="js/classie.js"></script>
 	<script src="js/selectFx.js"></script>
 	<script src="js/fullscreenForm.js"></script>
+
+
   </body>
 
-	<!-- jQuery -->
-  <script src="js/jquery.js"></script>
-	<script src="js/jquery-3.2.1.min.js"></script>
+
 
 	<script>
 
@@ -522,10 +529,6 @@
 		$('.shbook').addClass('rotated');
 	}
 
-	function goPg1() {
-		$('#book-1').jump(1);
-	}
-
 	function slideFade(elem)
 	{
    	var fade = { opacity: 0, transition: "opacity 0.4s" };
@@ -536,6 +539,87 @@
 
 
 	</script>
+
+	<script>
+			var Page = (function() {
+
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '.bb-nav-next' ),
+						$navPrev : $( '.bb-nav-prev' ),
+						$topNavPoem : $( '#poemBtn' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 1000,
+							shadowSides : 0.8,
+							shadowFlip : 0.4
+						} );
+
+						initEvents();
+					},
+					initEvents = function() {
+
+						var $slides = config.$bookBlock.children();
+
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+
+
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+
+						config.$topNavPoem.on( 'click touchstart', function() {
+							console.log("Clicked poem btn 1");
+							config.$bookBlock.BookBlock('jump', 3);
+							console.log("Clicked poem btn");
+						});
+
+						// function goToPg(page) {
+						// 	config.bb.bookblock('jump', 1);
+						//
+						// }
+
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+
+					return { init : init };
+
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
 
 	<script>
 	  (function() {
