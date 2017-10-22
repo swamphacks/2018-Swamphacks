@@ -35,7 +35,7 @@
 		this.el = el;
 		this.book = this.el.querySelector( '.book' );
 		this.ctrls = this.el.querySelector( '.buttons' );
-		this.details = this.el.querySelector( '.details' );
+		this.opener = this.el.querySelector('.shbook');
 		// create the necessary structure for the books to rotate in 3d
 		this._layout();
 
@@ -57,7 +57,6 @@
 
 		this.closeDetailsCtrl = document.createElement( 'span' )
 		this.closeDetailsCtrl.className = 'close-details';
-		this.details.appendChild( this.closeDetailsCtrl );
 	}
 
 	Book.prototype._initBookBlock = function() {
@@ -79,6 +78,7 @@
 
 		if( this.bb ) {
 			this.ctrls.querySelector( 'a:nth-child(1)' ).addEventListener( 'click', function( ev ) { ev.preventDefault(); self._open(); } );
+			this.opener.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._open(); } );
 			this.ctrlBBClose.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._close(); } );
 			this.ctrlBBNext.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._nextPage(); } );
 			this.ctrlBBPrev.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._prevPage(); } );
