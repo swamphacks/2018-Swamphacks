@@ -171,7 +171,7 @@
 							<img class="cloud4" src="img/cloud.png"></img>
 						</div>
 						<div class="bb-custom-side right-island-right">
-							<div class="faq-title">FAQS</div>
+							<div class="faq-title">Chapter 2: FAQS</div>
 							<div class="faq-question top-fq">What is a hackathon?</div>
 							<div class="faq-txt">
 								A hackathon is a weekend long event where projects are made from idea to prototype. At the end of the given time, projects are presented in a science fair setting—which, yes, includes prizes. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, tech workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease.
@@ -224,7 +224,7 @@
 							<img class="vending" src="img/vending.png"></img>
 						</div>
 						<div class="bb-custom-side page-layout-3 schedule-list">
-							<div class="faq-title">Schedule</div>
+							<div class="faq-title">Chapter 3: Schedule</div>
 							<div class="faq-question top-fq">Friday, January 20</div>
 							<div class="faq-txt-sh">
 								Check-In + Dinner
@@ -312,18 +312,9 @@
 						<!-- <img id="bookprev" class="shbook rotatedBefore" src="img/shbook.png"></img> -->
 						<div id="bookshelf" class="bookshelf">
 							<figure id="bookhome">
-								<div class="book shbook rotatedBefore" data-book="book-1"></div>
-								<div class="buttons"><a href="#" onclick="openBook()">Look inside</a><a href="">Details</a></div>
-								<figcaption><h2 class="bookfig">9 Lives <span>Andrew Hudson</span></h2></figcaption>
-								<div class="details">
-									<ul>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-										tempor incididunt ut labore et dolore magna aliqua.</li>
-										<li>Graham Press</li>
-										<li>12.09.2010</li>
-										<li>397 pages</li>
-									</ul>
-								</div>
+								<div class="book shbook rotatedBefore" data-book="book-1" onclick="openBook()"></div>
+								<div class="buttons"><a></a></div>
+								<figcaption><h2 class="bookfig">SwampHacks IV<span>January 19-21, 2018</span></h2></figcaption>
 							</figure>
 						</div>
 						<!-- </div> -->
@@ -454,24 +445,6 @@
 	</body>
 	<script>
 		screen.orientation.lock('landscape');
-		// function pageScroll() {
-		//   window.scrollBy(0,1);
-		//   scrolldelay = setTimeout(pageScroll,10);
-		// }
-		$(function()
-		{
-		$(".shbook").click(function()
-		{
-						$(".shbook").css("border-color", "red");
-						console.log("Clicked Book");
-						slideFade($('#logo'));
-						slideFade($('#mainheader'));
-						slideFade($('#headercaption'));
-						// slideFade($('#applybtn'));
-						$('#bookprev').removeClass('rotatedBefore');
-						$('#bookprev').addClass('rotated');
-		});
-		});
 		function openBook() {
 			//$('.header').addClass('small-header');
 			$(".header").css("top", "0px");
@@ -482,15 +455,16 @@
 			slideFade($('#headercaption'));
 			$('.shbook').removeClass('rotatedBefore');
 			$('.shbook').addClass('rotated');
+			// $('.perspective').css("display", "none");
 		}
 		function slideFade(elem)
 		{
-		var fade = { opacity: 0, transition: "opacity 0.4s" };
-		elem.css(fade).slideUp();
+			var fade = { opacity: 0, transition: "opacity 0.4s" };
+			elem.css(fade).slideUp();
 		}
 		var rotated = false;
-		</script>
-		<script>
+	</script>
+	<script>
 		(function() {
 		var formWrap = document.getElementById( 'fs-form-wrap' );
 		[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
