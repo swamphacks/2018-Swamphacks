@@ -22,6 +22,7 @@
 		================================================== -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Playfair+Display:400,400i,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	</head>
 	<body id="indexbody">
@@ -44,13 +45,12 @@
 							<div class="imgcontainer">
 								<img class="floating-island float-up" src="img/justisland.png"></img>
 							</div>
-							<img class="cloud1" src="img/cloud.png"></img>
-							<img class="cloud2" src="img/cloud.png"></img>
+
 						</div>
-						<div class="bb-custom-side page-layout-3">
+						<div class="bb-custom-side">
 							<div id="poem-view">
 								<!-- <div class="poemT">Some Inspiring Title</div> -->
-								<div class="poem-txt">
+								<div class="inner-right-front">
 									<!-- When I was a child<br>
 									my mother would tell me<br>
 									I would one day get an oyster<br>
@@ -77,15 +77,18 @@
 									&emsp; &emsp; a new friend, <br>
 									&emsp; &emsp; &emsp; an innovator, <br>
 									and everything in between -->
-									swamphacks IV
-									<br>
-									<br>
-									University of Florida
-									<br>
-									January 19-21, 2018
+
+              		<div class="main-logo-con imgcontainer">
+										<img id="logo" class="" src="img/logoblue.png"></img>
+									</div>
+									<h1 id="mainheader">swamp<b>hacks IV</b></h1>
+                	<p id="headercaption">University of Florida | January 19-21, 2018</p>
+
 								</div>
 							</div>
 						</div>
+						<img class="cloud1" src="img/cloud.png"></img>
+						<img class="cloud2" src="img/cloud.png"></img>
 					</div>
 					<div class="bb-item" id="item2">
 						<div class="bb-custom-side bbsidebor page-layout-3">
@@ -121,7 +124,7 @@
 							<div class="floor"></div>
 							<div class="fs-form-wrap" id="fs-form-wrap">
 								<div class="fs-title">
-									<div class="poem-title f-tite">Chapter 1: Apply to SwampHacks!</div>
+									<div class="poem-title ch-titles">Chapter 1: Apply!</div>
 									<!-- <div class="codrops-top">
 																<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/NotificationStyles/"><span>Previous Demo</span></a>
 																<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19520"><span>Back to the Codrops Article</span></a>
@@ -182,7 +185,7 @@
 							<img class="cloud4" src="img/cloud.png"></img>
 						</div>
 						<div class="bb-custom-side right-island-right">
-							<div class="faq-title">Chapter 2: FAQS</div>
+							<div class="faq-title ch-titles">Chapter 2: FAQS</div>
 							<div class="faq-question top-fq">What is a hackathon?</div>
 							<div class="faq-txt">
 								A hackathon is a weekend long event where students from all over come together to build projects. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease.
@@ -217,7 +220,7 @@
 							</div>
 							<div class="faq-question">Will I be sitting at my computer all weekend?</div>
 							<div class="faq-txt">
-								Negatory! (unless you want to). During the event, we will have a multitude of activities for you to do! These will include networking sessions, informal talks, workshops, and much more, so don't fret about being isolated. 
+								Negatory! (unless you want to). During the event, we will have a multitude of activities for you to do! These will include networking sessions, informal talks, workshops, and much more, so don't fret about being isolated.
 							</div>
 							<div class="faq-question">Will SwampHacks provide travel reimbursement?</div>
 							<div class="faq-txt">
@@ -239,7 +242,7 @@
 							<img class="vending" src="img/vending.png"></img>
 						</div>
 						<div class="bb-custom-side page-layout-3 schedule-list">
-							<div class="faq-title">Chapter 3: Schedule</div>
+							<div class="faq-title ch-titles">Chapter 3: Schedule</div>
 							<div class="faq-question top-fq">Friday, January 20</div>
 							<div class="faq-txt-sh">
 								Check-In + Dinner
@@ -301,7 +304,7 @@
 						</div>
 						<div class="bb-custom-side page-layout-3">
 							<div class="imgcontainer">
-								
+
 							</div>
 						</div>
 					</div>
@@ -466,14 +469,14 @@
 			$(".header").css("top", "0px");
 			$(".head").css("height", "60px");
 			$(".tabletop").addClass("book-open-tabletop");
-			slideFade($('#logo'));
-			slideFade($('#mainheader'));
-			slideFade($('#headercaption'));
+			// slideFade($('#logo'));
+			// slideFade($('#mainheader'));
+			// slideFade($('#headercaption'));
 			$('.shbook').removeClass('rotatedBefore');
 			$('.shbook').addClass('rotated');
-			setTimeout(function() { 
-			    $(".book").css("display", "none"); 
-			},500);
+			setTimeout(function() {
+			    $(".book").css("display", "none");
+			},100);
 			// $('.book').css("display", "none");
 			// $('.perspective').css("display", "none");
 		}
@@ -529,7 +532,7 @@
 					initEvents();
 				},
 				initEvents = function() {
-					
+
 					var $slides = config.$bookBlock.children();
 
 					// add navigation events
@@ -570,7 +573,7 @@
 						return false;
 					} );
 
-					
+
 					// add swipe events
 					$slides.on( {
 						'swipeleft' : function( event ) {

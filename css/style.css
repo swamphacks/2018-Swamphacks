@@ -472,9 +472,10 @@ a .circlebtn {
 }
 
 #mainheader {
-  font-size: 60px;
+  font-size: 50px;
+	text-align: center;
   font-family: 'Montserrat-Medium', serif;
-  color: white;
+  color: #2D3B2A;
   transition: 0.3s;
 }
 
@@ -488,10 +489,12 @@ a .circlebtn {
 }
 
 #headercaption {
-  font-size: 26px;
+	margin-top: -30px;
+  font-size: 22px;
   font-family: 'Montserrat', serif;
-  color: white;
+  color: #6C9668;
   transition: 0.3s;
+	text-align: center;
 }
 
 #spcap {
@@ -515,7 +518,7 @@ a .circlebtn {
 }
 
 #logo {
-	height: 114px;
+	height: 110px;
 	width: 240px;
 	display: inline-block;
   transition: 0.3s;
@@ -526,7 +529,6 @@ a .circlebtn {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -ms-user-select: none;
-	margin-top: 35%;
 }
 
 .bookrow {
@@ -899,8 +901,9 @@ componentForm.css:117
 
 .poem-title {
 	color: #333333;
-	font-size: 2.25em;
-	font-family: 'Rockwell' !important;
+	font-size: 3em;
+	/*font-family: 'Rockwell' !important;*/
+	font-family: 'Poppins', sans-serif;
 }
 
 .poemT {
@@ -914,8 +917,8 @@ componentForm.css:117
 }
 
 .fs-title {
-	margin-left: 50px !important;
-	padding-left: 0px !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 .bb-nav-close {
@@ -1039,7 +1042,7 @@ componentForm.css:117
 
 }
 
-.island-back .cloud1 {
+.firstitem .cloud1 {
 	width: 7.5em; /* 120/16 */
 	height: auto;
 	position: absolute;
@@ -1047,7 +1050,7 @@ componentForm.css:117
 	left: -7.5em; /* 120/16 */
 }
 
-.island-back .cloud2 {
+.firstitem .cloud2 {
 	width: 9.375em; /* 150/16 */
 	height: auto;
 	position: absolute;
@@ -1066,7 +1069,8 @@ componentForm.css:117
 	width: 100%;
 	font-size: 1.5em; /* 14/16 */
 	line-height: 1.375em; /* 22/16 */
-	font-family: 'Rockwell';
+	/*font-family: 'Rockwell';*/
+	font-family: 'Poppins', sans-serif;
 
 }
 
@@ -1079,7 +1083,8 @@ componentForm.css:117
 	text-align: justify;
 	font-size: 1.5em; /* 18/16 */
 	line-height: 1.75em; /* 28/16 */
-	font-family: 'Rockwell';
+	/*font-family: 'Rockwell';*/
+	font-family: 'Poppins', sans-serif;
 	padding: 0 2em; /* 100/16 */
 }
 
@@ -1115,13 +1120,17 @@ componentForm.css:117
 	overflow-y: scroll;
 }
 
+.ch-titles {
+	margin-top: 40px !important;
+	padding-left: 30px !important;
+}
+
 .faq-title {
-	margin-top: 30px;
-	padding-left: 30px;
 	width: 100%;
 	color: #333333;
-  	font-size: 3em;
-	font-family: 'Rockwell' !important;
+  font-size: 3em;
+	/*font-family: 'Rockwell' !important;*/
+	font-family: 'Poppins', sans-serif;
 }
 
 .faq-question {
@@ -1143,7 +1152,7 @@ componentForm.css:117
 	text-align: left;
 	font-size: 1.5em;
 	line-height: 1.7em;
-	font-family: 'Rockwell';
+	font-family: 'Poppins', sans-serif;
 	padding: 30px;
 }
 
@@ -1152,7 +1161,7 @@ componentForm.css:117
 	text-align: left;
 	font-size: 1.5em;
 	line-height: 26px;
-	font-family: 'Rockwell';
+	font-family: 'Poppins', sans-serif;
 	padding: 30px;
 	margin-top: 30px;
 }
@@ -1309,19 +1318,19 @@ body {
  -moz-animation: bounce 2s infinite;
  -o-animation: bounce 2s infinite;
 }
- 
+
 @-webkit-keyframes bounce {
- 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
  40% {-webkit-transform: translateY(-30px);}
  60% {-webkit-transform: translateY(-15px);}
 }
- 
+
 @-moz-keyframes bounce {
  0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
  40% {-moz-transform: translateY(-30px);}
  60% {-moz-transform: translateY(-15px);}
 }
- 
+
 @-o-keyframes bounce {
  0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
  40% {-o-transform: translateY(-30px);}
@@ -1331,4 +1340,8 @@ body {
  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
  40% {transform: translateY(-30px);}
  60% {transform: translateY(-15px);}
+}
+
+.main-logo-con {
+	padding-top: 25%;
 }
