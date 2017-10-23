@@ -50,8 +50,8 @@ body {
 .book {
     position: relative;
     margin: 0 auto;
-    width: 180px;
-    height: 260px;
+    width: 20em;
+    height: 29em;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -380,8 +380,6 @@ body {
     background-size: cover;
 }
 
-.page-layout-3 div { padding-top: 0; }
-
 .page-layout-3 h3 {
     margin: 0;
     text-transform: uppercase;
@@ -407,6 +405,7 @@ body {
     bottom: 20px;
     z-index: 1000;
     text-align: center;
+    opacity: .2;
 }
 
 .bb-custom-wrapper > nav a {
@@ -432,9 +431,10 @@ body {
 .no-csstransforms3d .book[data-book="book-1"],
 .no-js .book[data-book="book-1"],
 .book[data-book="book-1"] .front {
-    background: url(../img/cover1.svg);
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/cover1.svg), #009bdb;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/cover1.svg), #009bdb;
+    background: url(../img/cover1.png);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/cover1.png), #009bdb;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/cover1.png), #009bdb;
+    background-size: contain;
 }
 
 .book[data-book="book-1"] .inner { border-color: #009bdb }
@@ -638,7 +638,7 @@ body {
 }
 
 .bb-custom-wrapper {
-    z-index: 2000;
+    z-index: 1001;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: visibility 0s 0.5s;
