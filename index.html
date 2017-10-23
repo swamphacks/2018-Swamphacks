@@ -28,7 +28,7 @@
 		<section class="header">
 			<div class="col-md-12 head linkfoot">
 				<div class="linkcontainer">
-					<div class="linkout"><a class="footlink" href="#" id="poemBtn">Poem</a></div>
+					<div class="linkout"><a class="footlink" href="#" id="poemBtn">Title</a></div>
 					<div class="linkout"><a class="footlink" href="#" id="aboutBtn">About</a></div>
 					<div class="linkout"><a class="footlink" href="#" id="appBtn">Application</a></div>
 					<div class="linkout"><a class="footlink" href="#" id="faqBtn">FAQ</a></div>
@@ -50,54 +50,40 @@
 						<div class="bb-custom-side page-layout-3">
 							<div id="poem-view">
 								<!-- <div class="poemT">Some Inspiring Title</div> -->
-								<div class="faq-txt col-md col-xs">
-									<div class="imgcontainer">
-										When I was a child<br>
-										my mother would tell me<br>
-										I would one day get an oyster<br>
-										filled with opportunity<br>
-										<br>
-										Throughout my childhood<br>
-										I believed in those words<br>
-										that an oyster would come<br>
-										if I put in time and hard work<br>
-										<br>
-										So I studied and waited<br>
-										for an oyster to come<br>
-										I waited for a treasure<br>
-										until I was almost 21<br>
-										<br>
-										Then one day I realized<br>
-										that oysters can't walk<br>
-										to find one you must seek it<br>
-										to be heard, you must talk<br>
-										<br>
-										so let SwampHacks be your oyster,<br>
-										your chance to be<br>
-										&emsp; a child again, <br>
-										&emsp; &emsp; a new friend, <br>
-										&emsp; &emsp; &emsp; an innovator, <br>
-										and everything in between
-									</div>
+								<div class="poem-txt">
+									<!-- When I was a child<br>
+									my mother would tell me<br>
+									I would one day get an oyster<br>
+									filled with opportunity<br>
+									<br>
+									Throughout my childhood<br>
+									I believed in those words<br>
+									that an oyster would come<br>
+									if I put in time and hard work<br>
+									<br>
+									So I studied and waited<br>
+									for an oyster to come<br>
+									I waited for a treasure<br>
+									until I was almost 21<br>
+									<br>
+									Then one day I realized<br>
+									that oysters can't walk<br>
+									to find one you must seek it<br>
+									to be heard, you must talk<br>
+									<br>
+									so let SwampHacks be your oyster,<br>
+									your chance to be<br>
+									&emsp; a child again, <br>
+									&emsp; &emsp; a new friend, <br>
+									&emsp; &emsp; &emsp; an innovator, <br>
+									and everything in between -->
+									Swamp<b>Hacks IV</b>
+									<br>
+									<br>
+									University of Florida
+									<br>
+									January 19-21, 2018
 								</div>
-								<!-- <div class="poem-txt col-md-6 col-xs-6">
-														<div class="imgcontainer">
-																				I waited for a treasure<br>
-																				until I was almost 21<br>
-																				<br>
-																				Then one day I realized<br>
-																				that oysters can't walk<br>
-																				to find one you must seek it<br>
-																				to be heard, you must talk<br>
-																				<br>
-																				so let SwampHacks be your oyster,<br>
-																				your chance to be<br>
-																				a child again<br>
-																				a new friend<br>
-																				an innovator<br>
-																				and everything in between
-														</div>
-								</div> -->
 							</div>
 						</div>
 					</div>
@@ -146,22 +132,45 @@
 									<ol class="fs-fields">
 										<li>
 											<label class="fs-field-label fs-anim-upper" for="q1">What is your name?</label>
-											<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/>
+											<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Albert E. Gator" required/>
 										</li>
 										<li>
-											<label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">Email address?</label>
-											<input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="gator@ufl.edu" required/>
+											<label class="fs-field-label fs-anim-upper" for="q1">Gender</label>
+											<input class="fs-anim-lower" id="q1" name="q2" type="text" required/>
 										</li>
 										<li>
-											<label class="fs-field-label fs-anim-upper" for="q2" data-info="Something here">School?</label>
-											<input class="fs-anim-lower" id="q3" name="q3" type="text" placeholder="Universiy of Florida" required/>
+											<label class="fs-field-label fs-anim-upper" for="q3">Race</label>
+											<input class="fs-anim-lower" id="q3" name="q3" type="text" required/>
 										</li>
 										<li>
-											<label class="fs-field-label fs-anim-upper" for="q4">Age?</label>
-											<input class="fs-mark fs-anim-lower" id="q4" name="q4" type="number" placeholder="18" step="1" min="18"/>
+											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Email address?</label>
+											<input class="fs-anim-lower" id="q4" name="q4" type="email" placeholder="gator@ufl.edu" required/>
 										</li>
+										<li>
+											<label class="fs-field-label fs-anim-upper" for="q5" data-info="What school are you from?">School?</label>
+											<input class="fs-anim-lower" id="q5" name="q5" type="text" placeholder="Universiy of Florida" required/>
+										</li>
+										<li data-input-trigger>
+								        <label class="fs-field-label fs-anim-upper" for="q4">What year are you?</label>
+								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								            <span><input id="q4b" name="q4" type="radio" value="conversion"/><label for="q4b" class="radio-conversion">Freshman!</label></span>
+								            <span><input id="q4c" name="q4" type="radio" value="social"/><label for="q4c" class="radio-social">Sophomore!</label></span>
+								            <span><input id="q4a" name="q4" type="radio" value="mobile"/><label for="q4a" class="radio-mobile">Junior!</label></span>
+								            <span><input id="q4d" name="q4" type="radio" value="mobile"/><label for="q4d" class="radio-mobile">Senior!</label></span>
+								            <span><input id="q4e" name="q4" type="radio" value="mobile"/><label for="q4e" class="radio-mobile">Super Senior!</label></span>
+								            <span><input id="q4f" name="q4" type="radio" value="mobile"/><label for="q4f" class="radio-mobile">N/A</label></span>
+								          </div>
+								        </li>
+									      <li data-input-trigger>
+									        <label class="fs-field-label fs-anim-upper" for="q4">I would like to...</label>
+									        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+									          <span><input id="q5b" name="q5" type="radio" value="conversion"/><label for="q5b" class="radio-conversion">Hack!</label></span>
+									          <span><input id="q5c" name="q5" type="radio" value="social"/><label for="q5c" class="radio-social">Volunteer!</label></span>
+									          <span><input id="q5a" name="q5" type="radio" value="mobile"/><label for="q5a" class="radio-mobile">Mentor!</label></span>
+									        </div>
+									      </li>
 									</ol><!-- /fs-fields -->
-									<button class="fs-submit" type="submit">Send answers</button>
+									<button class="fs-submit" type="submit">Submit!</button>
 								</form><!-- /fs-form -->
 							</div><!-- /fs-form-wrap -->
 						</div>
@@ -176,27 +185,27 @@
 							<div class="faq-title">Chapter 2: FAQS</div>
 							<div class="faq-question top-fq">What is a hackathon?</div>
 							<div class="faq-txt">
-								A hackathon is a weekend long event where projects are made from idea to prototype. At the end of the given time, projects are presented in a science fair setting and judged by our judges fo. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, tech workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease.
+								A hackathon is a weekend long event where students from all over come together to build projects. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease.
 							</div>
 							<div class="faq-question">What should I bring?</div>
 							<div class="faq-txt">
-								Bring yourself, some comfy clothes, toiletries (toothpaste, toothbrush, deodorant, etc) and your hacking gear (laptop, hardware…and don’t forget the chargers!)
+								Bring yourself, some comfy clothes, toiletries (toothpaste, toothbrush, deodorant, etc) and your hacking gear (laptop, hardware, and chargers!)
 							</div>
 							<div class="faq-question">Help, this is my first hackathon!?</div>
 							<div class="faq-txt">
-								That is awesome! We are so glad you decided to be a part of the hacker community. SwampHacks welcomes everyone of any major and any level as long as they have a passion for development! We will have workshops during the event, mentors to help you through any troubles, so no matter what skill levels, we will provide the resources to help you learn.
+								That is awesome! We are so glad you decided to be a part of the hacker community. SwampHacks welcomes everyone of any major and any level as long as they have a passion for development! We will have workshops and mentors to help you throughout the event. Aside from that, we'll also have plenty of resources for you to use. Above all, remember to frequently ask for help, talk to a lot of people, eat tons of food, and collect as much swag as possible!
 							</div>
 							<div class="faq-question">Can high school students attend?</div>
 							<div class="faq-txt">
-								Although we would love to host high school students, our hacking venue does not allow minors to stay overnight, so we cannot allow high school students to participate this year. We hope that you can join us in the future!
+								As much as we'd love to see high school participants, our hacking venue does not allow minors to stay overnight, so we cannot allow high school students to participate this year. We hope that you can join us in the future though!
 							</div>
-							<div class="faq-question">How do I log in?</div>
+							<div class="faq-question">What happens after I apply?</div>
 							<div class="faq-txt">
-								If you received an acceptance email, you can access your information by logging in to your generated account. Otherwise, don’t worry about it. :)
+								Thanks for applying! Sit tight and we'll send an email out regarding your application status. In the email, we'll give you more information and further instructions on what to do!
 							</div>
 							<div class="faq-question">What do I do about teams?</div>
 							<div class="faq-txt">
-								Gather your friends, meet some peeps at opening, or attend our team-creation event right after opening ceremonies. No worries about knowing anyone beforehand; SwampHacks is for creating new connections and new people from around the states. Maximum 4 people per team.
+								Gather your friends, meet some peeps at opening, or attend our team-creation event right after opening ceremonies. No worries about knowing anyone beforehand; SwampHacks is for creating new connections and meeting new people from around the states. Maximum 4 people per team.
 							</div>
 							<div class="faq-question">How much will I be spending?</div>
 							<div class="faq-txt">
@@ -204,15 +213,19 @@
 							</div>
 							<div class="faq-question">How do I get there?</div>
 							<div class="faq-txt">
-								Whether it’s walking, driving, boating, as long as you get here! We are working to charter buses to pick up students from nearby schools. We will be rolling out more information as the event nears.
+								We are working to charter buses to pick up students from nearby schools. We will have a north-bound bus starting in Miami and a south-bound bus driving from Georgia Tech. Emails detailing bus logistics will be sent to those accepted from relevant schools. We will be rolling out more information as the event nears.
 							</div>
 							<div class="faq-question">Will I be sitting at my computer all weekend?</div>
 							<div class="faq-txt">
-								That decision is up to you, but if you would like a break, we have so much for you to do. We will have a multitude of activities, spanning from puzzle hunts to ping pong tournaments. In addition, these events will contribute to scoring points in the SwampCup! Who will be the champion of 2017? It could be you!
+								Negatory! (unless you want to). During the event, we will have a multitude of activities for you to do! These will include networking sessions, informal talks, workshops, and much more, so don't fret about being isolated. 
 							</div>
-							<div class="faq-question">Is there any travel reimbursement?</div>
+							<div class="faq-question">Will SwampHacks provide travel reimbursement?</div>
 							<div class="faq-txt">
-								We will have a north-bound bus starting in Miami and a south-bound bus driving from Georgia Tech. Emails detailing bus logistics will be sent to those accepted from relevant schools. Unfortunately, we will not be offering individual travel reimbursement this year.
+								As of now, we are still looking into the possibility of travel reimbursements, but we'll keep you posted!
+							</div>
+							<div class="faq-question">Why is the website a storybook?</div>
+							<div class="faq-txt">
+								Long story short, this year SwampHacks is encouraging all participants to work on a project that they are genuinely invested in. Whether that be a cause for a niche interest or grandiose scheme for the greater good, we want our participants to use the resources we provide at our event to "create their own story"®.
 							</div>
 						</div>
 					</div>
@@ -297,7 +310,6 @@
 					<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">Last page</a>
 					<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
 					<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
-					<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Next</a>
 				</nav>
 			</div><!-- /bb-custom-wrapper -->
 		</div>
@@ -332,6 +344,7 @@
 					<div class="col-md-12">
 						<h1 id="spheader">Sponsors</h1>
 						<p id="spcap">Coming Soon!</p>
+						<p id="spcap2">For sponsorship information, email us at: sponsors@swamphacks.com</p>
 					</div>
 				</div>
 				<div class="row sp-row">
@@ -448,7 +461,6 @@
 		<script src="js/fullscreenForm.js"></script>
 	</body>
 	<script>
-		screen.orientation.lock('landscape');
 		function openBook() {
 			//$('.header').addClass('small-header');
 			$(".header").css("top", "0px");
@@ -459,6 +471,10 @@
 			slideFade($('#headercaption'));
 			$('.shbook').removeClass('rotatedBefore');
 			$('.shbook').addClass('rotated');
+			setTimeout(function() { 
+			    $(".book").css("display", "none"); 
+			},500);
+			// $('.book').css("display", "none");
 			// $('.perspective').css("display", "none");
 		}
 		function slideFade(elem)
@@ -467,6 +483,10 @@
 			elem.css(fade).slideUp();
 		}
 		var rotated = false;
+		function show()
+		{
+		//Function content goes here
+		}
 	</script>
 	<script>
 		(function() {
