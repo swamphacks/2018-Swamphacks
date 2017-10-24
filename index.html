@@ -191,7 +191,7 @@
 							<div class="faq-title ch-titles">Chapter 2: FAQS</div>
 							<div class="faq-question top-fq">What is a hackathon?</div>
 							<div class="faq-txt">
-								A hackathon is a weekend long event where students from all over come together to build projects. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease. 
+								A hackathon is a weekend long event where students from all over come together to build projects. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease.
 							</div>
 							<div class="faq-question top-fq">Where is SwampHacks?</div>
 							<div class="faq-txt">
@@ -216,7 +216,7 @@
 							</div>
 							<div class="faq-question">Can volunteers participate in hacking?</div>
 							<div class="faq-txt">
-								Unfortunately, as a volunteer, we'll need you to help out for the duration of the event. As a result, volunteers are not allowed to participate or help participants in the hackathon. 
+								Unfortunately, as a volunteer, we'll need you to help out for the duration of the event. As a result, volunteers are not allowed to participate or help participants in the hackathon.
 							</div>
 							<div class="faq-question">What happens after I apply?</div>
 							<div class="faq-txt">
@@ -735,7 +735,7 @@
 
   function saveData() {
 
-		var ref = new Firebase("https://swamphacks-applicants-2018.firebaseio.com/");
+		var ref = new Firebase("https://swamphacks-applicants.firebaseio.com");
 
     var nameVal = $("#q1").val();
 		var genderVal = $("#q2").val();
@@ -840,7 +840,7 @@
 		} );
 		new FForm( formWrap, {
 		onReview : function() {
-			classie.add( document.body, 'overview' ); 
+			classie.add( document.body, 'overview' );
 		}
 		} );
 		})();

@@ -111,6 +111,10 @@
 
 }
 
+#bookshelf {
+	margin-top: 30%;
+}
+
 .fullscreen {
 	border-radius: 10px;
 	margin: 15px;
@@ -617,7 +621,7 @@ a .circlebtn {
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
-	border-width: 10px;
+	border-width: 6px;
 	border-color: white;
 	border-style: solid;
 	border-radius: 10px;
