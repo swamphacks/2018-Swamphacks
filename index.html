@@ -192,7 +192,7 @@
 							<div class="faq-title ch-titles">Chapter 2: FAQS</div>
 							<div class="faq-question top-fq">What is a hackathon?</div>
 							<div class="faq-txt">
-								A hackathon is a weekend long event where students from all over come together to build projects. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease. 
+								A hackathon is a weekend long event where students from all over come together to build projects. The purpose of a hackathon is to have students learn development by creating a product while being provided resources like free-rentable hardware, workshops, and mentors. Hackathons are a space where road-blocks are eliminated, and students can learn new skills with ease.
 							</div>
 							<div class="faq-question top-fq">Where is SwampHacks?</div>
 							<div class="faq-txt">
@@ -217,7 +217,7 @@
 							</div>
 							<div class="faq-question">Can volunteers participate in hacking?</div>
 							<div class="faq-txt">
-								Unfortunately, as a volunteer, we'll need you to help out for the duration of the event. As a result, volunteers are not allowed to participate or help participants in the hackathon. 
+								Unfortunately, as a volunteer, we'll need you to help out for the duration of the event. As a result, volunteers are not allowed to participate or help participants in the hackathon.
 							</div>
 							<div class="faq-question">What happens after I apply?</div>
 							<div class="faq-txt">
@@ -725,69 +725,70 @@
   //   usersRef.on('value', function(snapshot) {
   //       console.log("Applicants: " + snapshot.numChildren());
   // });
+    $(function(){
+	  function checkEdu(emailVal) {
+        return (emailVal.substr(-4) == '.edu');
+      }
 
-	function checkEdu(emailVal) {
-      return (emailVal.substr(-4) == '.edu');
-    }
+	  function validateEmail(emailVal) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(emailVal);
+      }
+	  //create a new connection to firebase
+	  var ref = new Firebase('https://swamphacks-applicants.firebaseio.com/');		
+	  var usersRef = ref.child("applicants");
 
-	function validateEmail(emailVal) {
-      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(emailVal);
-    }
 
-  function saveData() {
 
-	var ref = Firebase("https://swamphacks-applicants.firebaseio.com/");
-
-	var nameVal = $("#q1").val();
-	var genderVal = $("#q2").val();
-	var raceVal = $("#q3").val();
-	var emailVal = $("#q4").val();
-	// var resume = $("#q5").val();
-	var resumeVal = "TODO";
-	var schoolVal = $("#q6").val();
-	// Check which year radio is selected
-	if(document.getElementById("q7a").checked) {
-		var yearVal = "freshman";
-	} else if (document.getElementById("q7b").checked) {
-		var yearVal = "sophomore";
-	} else if (document.getElementById("q7c").checked) {
-		var yearVal = "junior";
-	} else if (document.getElementById("q7d").checked) {
-		var yearVal = "senior";
-	} else if (document.getElementById("q7e").checked) {
-		var yearVal = "super-senior";
-	} else if (document.getElementById("q7f").checked) {
-		var yearVal = "na";
-	}
-	// Check which preference radio is selected
-	if(document.getElementById("q8a").checked) {
-		var preferenceVal = "hack";
-	} else if (document.getElementById("q8b").checked) {
-		var preferenceVal = "volunteer";
-	} else if (document.getElementById("q8c").checked) {
-		var preferenceVal = "mentor";
-	}
-
-		// .child("applicants")
-    var usersRef = ref.child("applicants");
-
-    if (validateEmail(emailVal)) {
-      usersRef.push().set({
-        name: nameVal,
-        gender: genderVal,
-        race: raceVal,
-		email: emailVal,
-		resume: resumeVal,
-		school: schoolVal,
-		year: yearVal,
-		pref: preferenceVal
-      });
-      console.log('Success! Applicant Added.');
-    } else {
-      console.log('Put a valid email.');
-    }
-  }
+  	  $('#myform').submit(function(event){
+	      var nameVal = $("#q1").val();
+		  var genderVal = $("#q2").val();
+		  var raceVal = $("#q3").val();
+		  var emailVal = $("#q4").val();
+		  // var resume = $("#q5").val();
+		  var resumeVal = "TODO";
+		  var schoolVal = $("#q6").val();
+		  // Check which year radio is selected
+		  if(document.getElementById("q7a").checked) {
+		   	  var yearVal = "freshman";
+		  } else if (document.getElementById("q7b").checked) {
+			  var yearVal = "sophomore";
+		  } else if (document.getElementById("q7c").checked) {
+			  var yearVal = "junior";
+		  } else if (document.getElementById("q7d").checked) {
+			  var yearVal = "senior";
+		  } else if (document.getElementById("q7e").checked) {
+			  var yearVal = "super-senior";
+		  } else if (document.getElementById("q7f").checked) {
+			  var yearVal = "na";
+		  }
+		  // Check which preference radio is selected
+		  if(document.getElementById("q8a").checked) {
+			 var preferenceVal = "hack";
+		  } else if (document.getElementById("q8b").checked) {
+			 var preferenceVal = "volunteer";
+		  } else if (document.getElementById("q8c").checked) {
+			 var preferenceVal = "mentor";
+		  }
+	    
+	      if (validateEmail(emailVal)) {
+	        usersRef.push({
+	        name: nameVal,
+	        gender: genderVal,
+	        race: raceVal,
+			email: emailVal,
+			resume: resumeVal,
+			school: schoolVal,
+			year: yearVal,
+			pref: preferenceVal
+	      });
+	      console.log('Success! Applicant Added.');
+	    } else {
+	      console.log('Put a valid email.');
+	    }
+	    return false;
+	  })
+	 })
   </script>
 
 
@@ -838,7 +839,7 @@
 		} );
 		new FForm( formWrap, {
 		onReview : function() {
-			classie.add( document.body, 'overview' ); 
+			classie.add( document.body, 'overview' );
 		}
 		} );
 		})();
