@@ -375,6 +375,7 @@ body {
     height: 100%;
     background: url(../img/portrait.jpg) no-repeat top left;
     background-size: cover;
+    overflow-y: auto;
 }
 
 .page-layout-3 h3 {
@@ -402,7 +403,7 @@ body {
     bottom: 20px;
     z-index: 1000;
     text-align: center;
-    opacity: .2;
+    opacity: .3;
 }
 
 .bb-custom-wrapper > nav a {
