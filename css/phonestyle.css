@@ -55,8 +55,9 @@
   }
 
   .linkout {
-    display: inline-block;
+    display: block;
     text-align: center;
+    width: 100%;
   }
 
   .linkout a {
@@ -66,17 +67,27 @@
     font-weight: lighter;
     line-height: 28px;
     transition: 0.3s;
+
   }
 
-  .footlink {
+  .linkout {
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 8px;
+
+  }
+
+  .linkcontainer {
+  	height: 100%;
+  	display: block;
   }
 
   .fs-radio-group {
     margin-left: -15px !important;
     column-count: 2;
+  }
+
+  .foot {
+    height: auto;
   }
 
 
