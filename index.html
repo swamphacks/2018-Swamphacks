@@ -124,6 +124,7 @@
 						</div>
 						<div class="bb-custom-side apply-page page-layout-office">
 							<div class="floor"></div>
+							<div class="success-form">Added!</div>
 							<div class="fs-form-wrap" id="fs-form-wrap">
 								<div class="fs-title">
 									<div class="poem-title ch-titles">Chapter 1: Apply!</div>
@@ -735,7 +736,7 @@
         return re.test(emailVal);
       }
 	  //create a new connection to firebase
-	  var ref = new Firebase('https://swamphacks-applicants.firebaseio.com/');		
+	  var ref = new Firebase('https://swamphacks-applicants.firebaseio.com/');
 	  var usersRef = ref.child("applicants");
 
 
@@ -770,19 +771,26 @@
 		  } else if (document.getElementById("q8c").checked) {
 			 var preferenceVal = "mentor";
 		  }
-	    
+
+			var emailKeyFormat = removeSpecial(emailVal);
+
 	      if (validateEmail(emailVal)) {
 	        usersRef.push({
-	        name: nameVal,
-	        gender: genderVal,
-	        race: raceVal,
-			email: emailVal,
-			resume: resumeVal,
-			school: schoolVal,
-			year: yearVal,
-			pref: preferenceVal
+	        	name: nameVal,
+	        	gender: genderVal,
+	        	race: raceVal,
+						email: emailVal,
+						resume: resumeVal,
+						school: schoolVal,
+						year: yearVal,
+						pref: preferenceVal
 	      });
+
 	      console.log('Success! Applicant Added.');
+
+				$(".success-form").css("display", "flex");
+
+				//bookblock.close();
 	    } else {
 	      console.log('Put a valid email.');
 	    }
@@ -794,6 +802,29 @@
 
 
 	<script>
+	//return true if char is a number
+	function isNumber (text) {
+  	reg = new RegExp('[0-9]+$');
+  	if(text) {
+    	return reg.test(text);
+  	}
+  	return false;
+	}
+
+	function removeSpecial (text) {
+  	if(text) {
+    	var lower = text.toLowerCase();
+    	var upper = text.toUpperCase();
+    	var result = "";
+    	for(var i=0; i<lower.length; ++i) {
+      	if(isNumber(text[i]) || (lower[i] != upper[i]) || (lower[i].trim() === '')) {
+        	result += text[i];
+      	}
+    	}
+    	return result;
+  	}
+  	return '';
+		}
 		function openBook() {
 			//$('.header').addClass('small-header');
 			$(".header").css("top", "0px");
@@ -921,25 +952,25 @@
 						}
 					} );
 
-					// add keyboard events
-					// $( document ).keydown( function(e) {
-					// 	var keyCode = e.keyCode || e.which,
-					// 		arrow = {
-					// 			left : 37,
-					// 			up : 38,
-					// 			right : 39,
-					// 			down : 40
-					// 		};
+					//add keyboard events
+					$( document ).keydown( function(e) {
+						var keyCode = e.keyCode || e.which,
+							arrow = {
+								left : 37,
+								up : 38,
+								right : 39,
+								down : 40
+							};
 
-					// 	switch (keyCode) {
-					// 		case arrow.left:
-					// 			config.$bookBlock.bookblock( 'prev' );
-					// 			break;
-					// 		case arrow.right:
-					// 			config.$bookBlock.bookblock( 'next' );
-					// 			break;
-					// 	}
-					// } );
+						switch (keyCode) {
+							case arrow.left:
+								config.$bookBlock.bookblock( 'prev' );
+								break;
+							case arrow.right:
+								config.$bookBlock.bookblock( 'next' );
+								break;
+						}
+					} );
 				};
 
 				return { init : init };
