@@ -248,6 +248,10 @@ a .circlebtn {
 	margin-bottom: 100px;
 }
 
+.faq-txt-bottom {
+	margin-bottom: 20px;	
+}
+
 .sm-sp:hover,
 .sm-sp:focus {
 	cursor: pointer;
