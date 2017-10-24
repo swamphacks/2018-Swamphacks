@@ -63,7 +63,6 @@
 
 #indexbody {
 	overflow-y: scroll;
-	overflow-x: auto;
 	background-image: url('../img/animal3.png');
 	background-size: cover;
 	/*background: #e9dfc4;
@@ -136,8 +135,7 @@
 .linkout {
   display: inline-block;
   text-align: center;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: .5em;
 }
 
 .footlink {
@@ -391,9 +389,7 @@ a .circlebtn {
 
 @media screen and (max-width: 780px) {
   .linkout {
-    /*display: block;
-    width: 100%;
-    padding: 10px;*/
+    
   }
   p{
   	font-size: 15px;
@@ -864,6 +860,14 @@ componentForm.css:117
 
 }
 
+.imgcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .fa-heart {
 	-webkit-animation: pound 0.5s infinite alternate;
 	transition: font-size 0.5s ease-in-out;
@@ -894,9 +898,17 @@ componentForm.css:117
 
 }
 
-.imgcontainer {
+.imgcontainer .about {
   width: 100%;
   height: 100%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.final{
+  width: 100%;
   display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1321,11 +1333,25 @@ componentForm.css:117
 	height: 40%;
 }
 
+.finalPage {
+	display: flex;
+	align-items: center;
+}
+
 .final-title{
 	margin-top: 30%;
 	width: 100%;
 	color: #333333;
 	font-size: 3em;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+}
+
+.concepts {
+	margin-top: 10%;
+	width: 100%;
+	color: #333333;
+  	font-size: 4em;
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
 }
@@ -1504,4 +1530,40 @@ body {
 #fileContainer [type=file] {
     cursor: pointer;
 }
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.gallery {
+  margin: 0 auto;
+  padding: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* or space-around */
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+} 
+
+.gallery > div:hover {
+  z-index: 1000;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.7,1.7);
+  transition: .3s transform;
+  width: 100%
+}
+
+.gallery > div > img {
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 1em; /* 8/16 */
+  width: 100%
 }
