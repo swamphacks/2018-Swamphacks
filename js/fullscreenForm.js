@@ -4,12 +4,12 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-	
+
 	'use strict';
 
 	var support = { animations : Modernizr.cssanimations },
@@ -21,7 +21,7 @@
 	 * extend obj function
 	 */
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -45,7 +45,7 @@
 			if( opt.appendTo ) {
 				opt.appendTo.appendChild( el );
 			}
-		}	
+		}
 		return el;
 	}
 
@@ -89,10 +89,10 @@
 
 		// all fields
 		this.fields = [].slice.call( this.fieldsList.children );
-		
+
 		// total fields
 		this.fieldsCount = this.fields.length;
-		
+
 		// show first field
 		classie.add( this.fields[ this.current ], 'fs-current' );
 
@@ -101,7 +101,7 @@
 
 		// create/add messages
 		this._addErrorMsg();
-		
+
 		// init events
 		this._initEvents();
 	};
@@ -168,7 +168,7 @@
 
 		// show next field
 		this.ctrlContinue.addEventListener( 'click', function() {
-			self._nextField(); 
+			self._nextField();
 		} );
 
 		// navigation dots
@@ -187,22 +187,22 @@
 				if( !input ) return;
 
 				switch( input.tagName.toLowerCase() ) {
-					case 'select' : 
+					case 'select' :
 						input.addEventListener( 'change', function() { self._nextField(); } );
 						break;
 
-					case 'input' : 
+					case 'input' :
 						[].slice.call( fld.querySelectorAll( 'input[type="radio"]' ) ).forEach( function( inp ) {
 							inp.addEventListener( 'change', function(ev) { self._nextField(); } );
-						} ); 
+						} );
 						break;
 
 					/*
 					// for our custom select we would do something like:
-					case 'div' : 
+					case 'div' :
 						[].slice.call( fld.querySelectorAll( 'ul > li' ) ).forEach( function( inp ) {
 							inp.addEventListener( 'click', function(ev) { self._nextField(); } );
-						} ); 
+						} );
 						break;
 					*/
 				}
@@ -233,7 +233,7 @@
 
 		// check if on last step
 		this.isLastStep = this.current === this.fieldsCount - 1 && backto === undefined ? true : false;
-		
+
 		// clear any previous error messages
 		this._clearError();
 
@@ -261,7 +261,7 @@
 		// also add class "fs-show" to the next field and the class "fs-hide" to the current one
 		classie.remove( currentFld, 'fs-current' );
 		classie.add( currentFld, 'fs-hide' );
-		
+
 		if( !this.isLastStep ) {
 			// update nav
 			this._updateNav();
@@ -280,7 +280,7 @@
 				if( support.animations ) {
 					this.removeEventListener( animEndEventName, onEndAnimationFn );
 				}
-				
+
 				classie.remove( self.fieldsList, 'fs-display-' + self.navdir );
 				classie.remove( currentFld, 'fs-hide' );
 
@@ -299,7 +299,7 @@
 				}
 				else {
 					classie.remove( nextField, 'fs-show' );
-					
+
 					if( self.options.ctrlNavPosition ) {
 						self.ctrlFldStatusCurr.innerHTML = self.ctrlFldStatusNew.innerHTML;
 						self.ctrlFldStatus.removeChild( self.ctrlFldStatusNew );
@@ -348,10 +348,10 @@
 			this.ctrlFldStatusNew = document.createElement( 'span' );
 			this.ctrlFldStatusNew.className = 'fs-number-new';
 			this.ctrlFldStatusNew.innerHTML = Number( this.current + 1 );
-			
+
 			// insert it in the DOM
 			this.ctrlFldStatus.appendChild( this.ctrlFldStatusNew );
-			
+
 			// add class "fs-show-next" or "fs-show-prev" depending on the navigation direction
 			var self = this;
 			setTimeout( function() {
@@ -407,7 +407,7 @@
 		if( !input ) return true;
 
 		switch( input.tagName.toLowerCase() ) {
-			case 'input' : 
+			case 'input' :
 				if( input.type === 'radio' || input.type === 'checkbox' ) {
 					var checked = 0;
 					[].slice.call( fld.querySelectorAll( 'input[type="' + input.type + '"]' ) ).forEach( function( inp ) {
@@ -424,7 +424,7 @@
 				}
 				break;
 
-			case 'select' : 
+			case 'select' :
 				// assuming here '' or '-1' only
 				if( input.value === '' || input.value === '-1' ) {
 					error = 'NOVAL';
@@ -450,11 +450,11 @@
 	FForm.prototype._showError = function( err ) {
 		var message = '';
 		switch( err ) {
-			case 'NOVAL' : 
-				message = 'Please fill the field before continuing';
+			case 'NOVAL' :
+				message = 'Please fill this out before continuing';
 				break;
-			case 'INVALIDEMAIL' : 
-				message = 'Please fill a valid email address';
+			case 'INVALIDEMAIL' :
+				message = 'Please use a valid email address';
 				break;
 			// ...
 		};
