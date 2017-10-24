@@ -21,9 +21,18 @@ body {
 
 .bookshelf {
     position: relative;
-    margin: 40px auto 0;
+    margin: 25% auto 0;
     list-style: none;
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    .bookshelf{
+        position: relative;
+        margin: 40px auto 0;
+        list-style: none;
+        text-align: center;
+    }
 }
 
 .bookshelf figure {
