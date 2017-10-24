@@ -1346,12 +1346,11 @@ componentForm.css:117
 }
 
 .finalPage {
-	display: flex;
 	align-items: center;
 }
 
 .final-title{
-	margin-top: 30%;
+	margin-top: 15%;
 	width: 100%;
 	color: #333333;
 	font-size: 3em;
@@ -1597,7 +1596,7 @@ body {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
-    line-height: 20px;
+    line-height: 1.25em; /* 20/16 */
     display: inline-block;
     color: #666;
 }
@@ -1635,6 +1634,10 @@ body {
     opacity: 1;
     /*-webkit-transform: scale(1);
     transform: scale(1);*/
+}
+
+.resume {
+	width: 100%;
 }
 
 #myform {
