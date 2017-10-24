@@ -46,4 +46,33 @@
     padding: 10px;
   }
 
+  .cloud1 {
+    display: none;
+  }
+
+  .cloud2 {
+    display: none;
+  }
+
+  .linkout {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .linkout a {
+    font-family: 'Montserrat', serif;
+    color: #48ABE0;
+    font-size: 1.2em;
+    font-weight: lighter;
+    line-height: 28px;
+    transition: 0.3s;
+  }
+
+  .footlink {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
 }

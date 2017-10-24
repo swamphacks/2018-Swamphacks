@@ -25,7 +25,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Playfair+Display:400,400i,700i" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:0" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+		<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:absolute;right:50px;top:0;width:10%;z-index:0" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
 	</head>
 	<body id="indexbody">
 		<section class="header">
@@ -727,71 +727,67 @@
   // });
 
 	function checkEdu(emailVal) {
-    return (emailVal.substr(-4) == '.edu');
-  }
+      return (emailVal.substr(-4) == '.edu');
+    }
 
 	function validateEmail(emailVal) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(emailVal);
-  }
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(emailVal);
+    }
 
   function saveData() {
 
-		var ref = new Firebase("https://swamphacks-applicants-2018.firebaseio.com/");
+	var ref = Firebase("https://swamphacks-applicants.firebaseio.com/");
 
-    var nameVal = $("#q1").val();
-		var genderVal = $("#q2").val();
-		var raceVal = $("#q3").val();
-		var emailVal = $("#q4").val();
-		// var resume = $("#q5").val();
-		var resumeVal = "TODO";
-		var schoolVal = $("#q6").val();
-		// Check which year radio is selected
-		if(document.getElementById("q7a").checked) {
-  		var yearVal = "freshman";
-		} else if (document.getElementById("q7b").checked) {
-  		var yearVal = "sophomore";
-		} else if (document.getElementById("q7c").checked) {
-  		var yearVal = "junior";
-		} else if (document.getElementById("q7d").checked) {
-  		var yearVal = "senior";
-		} else if (document.getElementById("q7e").checked) {
-  		var yearVal = "super-senior";
-		} else if (document.getElementById("q7f").checked) {
-  		var yearVal = "na";
-		}
-		// Check which preference radio is selected
-		if(document.getElementById("q8a").checked) {
-  		var preferenceVal = "hack";
-		} else if (document.getElementById("q8b").checked) {
-  		var preferenceVal = "volunteer";
-		} else if (document.getElementById("q8c").checked) {
-  		var preferenceVal = "mentor";
-		}
+	var nameVal = $("#q1").val();
+	var genderVal = $("#q2").val();
+	var raceVal = $("#q3").val();
+	var emailVal = $("#q4").val();
+	// var resume = $("#q5").val();
+	var resumeVal = "TODO";
+	var schoolVal = $("#q6").val();
+	// Check which year radio is selected
+	if(document.getElementById("q7a").checked) {
+		var yearVal = "freshman";
+	} else if (document.getElementById("q7b").checked) {
+		var yearVal = "sophomore";
+	} else if (document.getElementById("q7c").checked) {
+		var yearVal = "junior";
+	} else if (document.getElementById("q7d").checked) {
+		var yearVal = "senior";
+	} else if (document.getElementById("q7e").checked) {
+		var yearVal = "super-senior";
+	} else if (document.getElementById("q7f").checked) {
+		var yearVal = "na";
+	}
+	// Check which preference radio is selected
+	if(document.getElementById("q8a").checked) {
+		var preferenceVal = "hack";
+	} else if (document.getElementById("q8b").checked) {
+		var preferenceVal = "volunteer";
+	} else if (document.getElementById("q8c").checked) {
+		var preferenceVal = "mentor";
+	}
 
+		// .child("applicants")
     var usersRef = ref.child("applicants");
 
     if (validateEmail(emailVal)) {
-      usersRef.push({
-        name: name,
-        gender: gender,
-        race: race,
-				email: email,
-				resume: resumeVal,
-				school: schoolVal,
-				year: yearVal,
-				pref: preferenceVal
+      usersRef.push().set({
+        name: nameVal,
+        gender: genderVal,
+        race: raceVal,
+		email: emailVal,
+		resume: resumeVal,
+		school: schoolVal,
+		year: yearVal,
+		pref: preferenceVal
       });
-
       console.log('Success! Applicant Added.');
-
     } else {
-
       console.log('Put a valid email.');
-
     }
   }
-
   </script>
 
 
@@ -925,24 +921,24 @@
 					} );
 
 					// add keyboard events
-					$( document ).keydown( function(e) {
-						var keyCode = e.keyCode || e.which,
-							arrow = {
-								left : 37,
-								up : 38,
-								right : 39,
-								down : 40
-							};
+					// $( document ).keydown( function(e) {
+					// 	var keyCode = e.keyCode || e.which,
+					// 		arrow = {
+					// 			left : 37,
+					// 			up : 38,
+					// 			right : 39,
+					// 			down : 40
+					// 		};
 
-						switch (keyCode) {
-							case arrow.left:
-								config.$bookBlock.bookblock( 'prev' );
-								break;
-							case arrow.right:
-								config.$bookBlock.bookblock( 'next' );
-								break;
-						}
-					} );
+					// 	switch (keyCode) {
+					// 		case arrow.left:
+					// 			config.$bookBlock.bookblock( 'prev' );
+					// 			break;
+					// 		case arrow.right:
+					// 			config.$bookBlock.bookblock( 'next' );
+					// 			break;
+					// 	}
+					// } );
 				};
 
 				return { init : init };
