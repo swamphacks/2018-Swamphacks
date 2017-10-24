@@ -395,7 +395,7 @@ a .circlebtn {
 
 @media screen and (max-width: 780px) {
   .linkout {
-    
+
   }
   p{
   	font-size: 15px;
@@ -998,13 +998,9 @@ componentForm.css:117
 	border-right: 0.5px solid lightgrey;
 }
 
-<<<<<<< HEAD
-/*.fs-form {
-=======
 .fs-form-full {
->>>>>>> 03b9adee7728040289222ca67ad5f3983a8725bb
 	margin-left: 50px !important;
-}*/
+}
 
 .fs-mark {
 
@@ -1571,7 +1567,7 @@ body {
   justify-content: space-between; /* or space-around */
   transition: .1s transform;
   transform: translateZ(0); /* hack */
-} 
+}
 
 .gallery > div:hover {
   z-index: 1000;
