@@ -179,7 +179,6 @@ button.fs-continue,
 .fs-fields > li label.fs-field-label {
 	display: inline-block;
 	padding: 0 5px 1em 0;
-	font-weight: 700;
 	pointer-events: none;
 }
 
@@ -281,7 +280,7 @@ button.fs-continue,
 	font-size: 1.2em;
 }
 
-.fs-fields .fs-radio-custom input[type="radio"] {
+/*.fs-fields .fs-radio-custom input[type="radio"] {
 	position: absolute;
 	display: block;
 	margin: 30px auto 20px;
@@ -368,7 +367,7 @@ button.fs-continue,
 
 .fs-form-overview .fs-fields .fs-radio-custom input[type="radio"]:checked + label {
 	color: rgba(0,0,0,0.8);
-}
+}*/
 
 .fs-fields textarea {
 	padding: 0.25em;
@@ -679,6 +678,7 @@ button.fs-continue:hover {
 	position: absolute;
 	bottom: 75%;
 	left: 50%;
+	font-family: 'Poppins', sans-serif !important;
 	z-index: 800;
 	max-width: 960px;
 	width: 70%;
@@ -807,20 +807,22 @@ input[type=text]::-ms-clear {
 		min-height: 500px;
 	}
 
-	.fs-form-wrap {
-		font-size: 70%;
+	.fs-form-wrap #myform {
+		font-size: 1.8em;
+
 	}
 
 	.fs-form {
-		top: 6em;
+		/*top: 6em;
 		right: 2em;
 		left: 0;
 		padding: 0 3.75em 0 1em;
 		width: auto;
-		font-size: 2em;
+		font-size: 2em;*/
+
 	}
 
-	.fs-form.fs-form-overview {
+	.fs-form .fs-form-overview {
 		top: 0;
 		right: 0;
 		padding: 1.5em 1em 8em 1em;
@@ -828,7 +830,7 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-title {
-		padding: 20px;
+
 	}
 
 	.fs-numbers {

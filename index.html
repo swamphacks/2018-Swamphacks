@@ -14,8 +14,9 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/cs-select.css" />
 		<link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
-		<!-- custom demo style -->
+
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/phonestyle.css" />
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/pleaserotate.js"></script>
 		<!-- Icons
@@ -79,7 +80,7 @@
 									and everything in between -->
 
               		<div class="main-logo-con imgcontainer">
-										<img id="logo" class="" src="img/logoblue.png"></img>
+										<img id="logo" class="" src="img/logoblue.svg"></img>
 									</div>
 									<h1 id="mainheader">swamp<b>hacks IV</b></h1>
                 	<p id="headercaption">University of Florida | January 19-21, 2018</p>
@@ -99,13 +100,13 @@
 								<div class="copyright-text">
 									Made with <i style="color: #FF4D40;" class="fa fa-heart pulse"></i> in Gainesville
 								</div>
-								<div class="copyright-text bottom"><i>In loving memory of the Physics Tree.</i></div>
+								<div class="copyright-text bottom"><i class="ptree">In loving memory of the Physics Tree.</i></div>
 							</div>
 						</div>
 						<div class="bb-custom-side page-layout-3">
 							<div class="imgcontainer">
 								<div class="about-txt">
-									SwampHacks is a 36 hour open coding event where students become creators. In the time allotted, students from around the country come together at the University of Florida to collaborate on projects, mingle in activities, and network with sponsors for a fully immersive experience.
+									SwampHacks is a <span class="highlight">36 hour</span> open coding event where <span class="highlight">students become creators</span>. In the time allotted, students from around the country come together at the <span class="highlight">University of Florida</span> to collaborate on projects, mingle in activities, and network with sponsors for a fully <span class="highlight">immersive</span> experience.
 								</div>
 							</div>
 						</div>
@@ -125,11 +126,6 @@
 							<div class="fs-form-wrap" id="fs-form-wrap">
 								<div class="fs-title">
 									<div class="poem-title ch-titles">Chapter 1: Apply!</div>
-									<!-- <div class="codrops-top">
-																<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/NotificationStyles/"><span>Previous Demo</span></a>
-																<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=19520"><span>Back to the Codrops Article</span></a>
-																<a class="codrops-icon codrops-icon-info" href="#"><span>This is a demo for a fullscreen form</span></a>
-									</div> -->
 								</div>
 								<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 									<ol class="fs-fields">
@@ -148,6 +144,13 @@
 										<li>
 											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Email address?</label>
 											<input class="fs-anim-lower" id="q4" name="q4" type="email" placeholder="gator@ufl.edu" required/>
+										</li>
+										<li>
+											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Resume?</label>
+											<label id="fileContainer"><i class="fa fa-upload" aria-hidden="true"></i>
+    										Choose a file...
+    										<input type="file"/>
+											</label>
 										</li>
 										<li>
 											<label class="fs-field-label fs-anim-upper" for="q5" data-info="What school are you from?">School?</label>
@@ -244,67 +247,273 @@
 						<div class="bb-custom-side page-layout-3 schedule-list">
 							<div class="faq-title ch-titles">Chapter 3: Schedule</div>
 							<div class="faq-question top-fq">Friday, January 20</div>
-							<div class="faq-txt-sh">
-								Check-In + Dinner
+
+							<div class="row faq-row top-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Check-In + Dinner
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											6pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Opening Ceremonies
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Opening Ceremonies
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											8pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Team Building + Sponsor Fair
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Team Building + Sponsorship Fair
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											9pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Hacking Begins!
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Hacking Begins!
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											10pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								APIs Workshop
+
+							<div class="row faq-row bottom-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Workshop Begins
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											11pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-question top-fq-sh">Saturday, January 21</div>
-							<div class="faq-txt-sh">
-								Midnight Snack
+
+							<div class="faq-question">Saturday, January 21</div>
+
+							<div class="row faq-row top-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Midnight Snack
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											12am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Breakfast
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Breakfast
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											8am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Lunch
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Lunch
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											1pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Dinner
+
+							<div class="row faq-row bottom-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Dinner
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											6pm
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-question top-fq-sh">Sunday, January 22</div>
-							<div class="faq-txt-sh">
-								Midnight Snack
+
+							<div class="faq-question">Sunday, January 22</div>
+
+							<div class="row faq-row top-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Midnight Snack
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											12am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Breakfast
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Breakfast
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											7am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								DevPost Submission Close
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											DevPost Submission Close
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											8am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Hacking Ends
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Hacking Ends
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											10am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Demo Fair
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Lunch
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											10:30am
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="faq-txt">
-								Closing Ceremonies
+
+							<div class="row faq-row inner-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Demo Fair
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											12pm
+										</div>
+									</div>
+								</div>
 							</div>
+
+							<div class="row faq-row last-faq-txt">
+								<div class="faq-inner">
+									<div class="col-xs-9 faq-txt-sh">
+										<div class="left-text">
+											Closing Ceremonies
+										</div>
+									</div>
+									<div class="col-xs-3 faq-txt-sh">
+										<div class="right-text">
+											2:40pm
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
 					<div class="bb-item">
-						<div class="bb-custom-side bbsidebor page-layout-3">
+						<div class="bb-custom-side page-layout-3 end-back">
 							<div class="lastPage">
 								<img class="heron-pic" src="img/heron.png"></img>
 								<img class="floating-island float-up last" src="img/justisland.png"></img>
 								<div class="final-title">The End</div>
 								<div class="final-txt"></div>
+								<img class="cloud6" src="img/cloud.png"></img>
+								<img class="cloud5" src="img/cloud.png"></img>
 							</div>
-						</div>
-						<div class="bb-custom-side page-layout-3">
-							<div class="imgcontainer">
 
+						</div>
+						<div class="bb-custom-side page-layout-3 imgcontainer">
+							<div class="row">
+								<div class="col-md-12 foot linkfoot">
+									<div class="linkcontainer">
+										<div class="footlink"><a class="" href="http://2017.swamphacks.com">Last Year's Site</a></div>
+										<div class="footlink"><a class="" href="team.html">Meet the Team</a></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -490,6 +699,11 @@
 		{
 		//Function content goes here
 		}
+
+		document.getElementById("fileContainer").onchange = function () {
+    	$("#fileContainer").css("backgroundColor", "#6C9668");
+		};
+
 	</script>
 	<script>
 		(function() {
@@ -648,5 +862,23 @@
 		$(".cloud4").animate({left: "+=140%"}, 20000, "swing", resetCloud4);
 		}
 		cloudRight4();
+
+		function resetCloud5() {
+			$(".cloud5").css("left", "-180px");
+			cloudRight5();
+		}
+		function cloudRight5() {
+		$(".cloud5").animate({left: "+=140%"}, 20000, "swing", resetCloud5);
+		}
+		cloudRight5();
+
+		function resetCloud6() {
+			$(".cloud6").css("left", "-120px");
+			cloudRight6();
+		}
+		function cloudRight6() {
+		$(".cloud6").animate({left: "+=130%"}, 12000, "swing", resetCloud6);
+		}
+		cloudRight6();
 	</script>
 </html>

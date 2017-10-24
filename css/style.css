@@ -100,6 +100,7 @@
 
 .foot {
   height: 80px;
+
 }
 
 .head {
@@ -139,8 +140,14 @@
   padding-right: 25px;
 }
 
+.footlink {
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .minirow {
-  height: 100%;
+	height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,15 +169,30 @@
 
 }
 
+.footlink a {
+  font-family: 'Montserrat', serif;
+  color: #48ABE0;
+  font-size: 1.8em;
+  font-weight: lighter;
+  line-height: 28px;
+  transition: 0.3s;
+
+}
+
+.footlink a:hover,
+.footlink a:focus {
+  color: #94C6EB;
+  text-decoration: none;
+
+}
+
 a .circlebtn {
-  font-size: 28px;
+  font-size: 1.8em;
   color: #48ABE0;
 }
 
 .circlebtn {
-  width: 50px;
-  height: 50px;
-  border-radius: 1000px;
+  border-radius: 100000px;
   border-width: 4px;
   border-style: solid;
   border-color: white;
@@ -178,6 +200,16 @@ a .circlebtn {
   color: blue;
   text-align: center;
   transition: 0.3s;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.btncon-foot {
+
 }
 
 .circlebtn:hover,
@@ -472,7 +504,7 @@ a .circlebtn {
 }
 
 #mainheader {
-  font-size: 50px;
+  font-size: 4em;
 	text-align: center;
   font-family: 'Montserrat-Medium', serif;
   color: #2D3B2A;
@@ -490,7 +522,7 @@ a .circlebtn {
 
 #headercaption {
 	margin-top: -30px;
-  font-size: 22px;
+  font-size: 1.8em;
   font-family: 'Montserrat', serif;
   color: #6C9668;
   transition: 0.3s;
@@ -518,8 +550,8 @@ a .circlebtn {
 }
 
 #logo {
-	height: 110px;
-	width: 240px;
+	height: auto;
+	width: 50%;
 	display: inline-block;
   transition: 0.3s;
   display: inline-block;
@@ -850,7 +882,7 @@ componentForm.css:117
 
 .apply-page {
 	overflow-y: auto;
-	background: #FDFDEF !important;
+	background: #F9F7F1 !important;
 }
 
 .office-pic {
@@ -901,7 +933,7 @@ componentForm.css:117
 
 .poem-title {
 	color: #333333;
-	font-size: 3em;
+	font-size: 3em !important;
 	/*font-family: 'Rockwell' !important;*/
 	font-family: 'Poppins', sans-serif;
 }
@@ -919,6 +951,7 @@ componentForm.css:117
 .fs-title {
 	margin: 0 !important;
 	padding: 0 !important;
+
 }
 
 .bb-nav-close {
@@ -934,10 +967,6 @@ componentForm.css:117
 
 }
 
-.fs-field-label {
-	color: #4FACDC;
-}
-
 .heron-pic {
 	animation: flyup 5s ease-in-out forwards infinite;
 	position: absolute;
@@ -951,9 +980,9 @@ componentForm.css:117
 	border-right: 0.5px solid lightgrey;
 }
 
-.fs-form {
+/*.fs-form {
 	margin-left: 50px !important;
-}
+}*/
 
 .fs-mark {
 
@@ -988,7 +1017,8 @@ componentForm.css:117
 }
 
 .page-layout-office .backwall {
-	background: #FDFDEF;
+	/*background: #FDFDEF;*/
+	background: #F9F7F1;
 	position: absolute;
 	bottom: 5em; /* 80/16 */
 	right: 0;
@@ -1038,11 +1068,15 @@ componentForm.css:117
 	background: #CEF9FA;
 }
 
+.end-back {
+	background: #CEF9FA;
+}
+
 .firstitem .page-layout-3 {
 
 }
 
-.firstitem .cloud1 {
+.cloud1 {
 	width: 7.5em; /* 120/16 */
 	height: auto;
 	position: absolute;
@@ -1050,7 +1084,23 @@ componentForm.css:117
 	left: -7.5em; /* 120/16 */
 }
 
-.firstitem .cloud2 {
+.cloud2 {
+	width: 9.375em; /* 150/16 */
+	height: auto;
+	position: absolute;
+	bottom: 1.25em; /* 20/16 */
+	left: -11.25em; /* 180/16 */
+}
+
+.cloud5 {
+	width: 7.5em; /* 120/16 */
+	height: auto;
+	position: absolute;
+	bottom: 6.25em; /* 100/16 */
+	left: -7.5em; /* 120/16 */
+}
+
+.cloud6 {
 	width: 9.375em; /* 150/16 */
 	height: auto;
 	position: absolute;
@@ -1074,8 +1124,16 @@ componentForm.css:117
 
 }
 
+.copyright-text .ptree {
+	font-size: 0.8em; /* 14/16 */
+}
+
 .bottom {
 	margin-top: 20%;
+}
+
+.highlight {
+	color: #6C9668;
 }
 
 .about-txt {
@@ -1100,7 +1158,7 @@ componentForm.css:117
 	background: #CEF9FA;
 }
 
-.right-island .cloud3 {
+.cloud3 {
 	width: 7.5em; /* 120/16 */
 	height: auto;
 	position: absolute;
@@ -1108,13 +1166,14 @@ componentForm.css:117
 	left: -7.5em; /* 120/16 */
 }
 
-.right-island .cloud4 {
+.cloud4 {
 	width: 9.375em; /* 150/16 */
 	height: auto;
 	position: absolute;
 	top: 3.125em; /* 50/16 */
 	left: -11.25em; /* 180/16 */
 }
+
 
 .right-island-right {
 	overflow-y: scroll;
@@ -1156,14 +1215,54 @@ componentForm.css:117
 	padding: 30px;
 }
 
-.faq-txt-sh {
-	width: 100%;
+.faq-row {
+	border-bottom-width: 2px;
+	border-bottom-color: #48ABE0;
+	border-bottom-style: dashed;
+	margin-right: 30px !important;
+	margin-left: 30px !important;
+}
+
+.schedule-list .top-faq-txt {
+	margin-top: 20px;
+}
+
+.schedule-list .inner-faq-txt {
+	margin-top: 15px;
+}
+
+.schedule-list .bottom-faq-txt {
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.schedule-list .last-faq-txt {
+	margin-top: 15px;
+	margin-bottom: 60px;
+}
+
+.faq-txt-sh .right-text {
+	text-align: right;
+	margin-right: -15px;
+	color: #6C9668;
+	font-weight: bold;
+}
+
+.left-text {
 	text-align: left;
+	margin-left: -15px;
+}
+
+.faq-inner {
+
+}
+
+.faq-txt-sh {
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-size: 1.5em;
 	line-height: 26px;
 	font-family: 'Poppins', sans-serif;
-	padding: 30px;
-	margin-top: 30px;
 }
 
 
@@ -1216,18 +1315,18 @@ componentForm.css:117
 
 .last{
 	position: absolute;
-	left: 20px;
-	bottom: 20px;
-	height: 30%;
+	left: 50%;
+	margin-left: -20%;
+	bottom: 20%;
+	height: 40%;
 }
 
 .final-title{
 	margin-top: 30%;
-	padding-left: 30px;
 	width: 100%;
 	color: #333333;
-  	font-size: 4em;
-	font-family: 'Rockwell' !important;
+	font-size: 3em;
+	font-family: 'Poppins', sans-serif;
 	text-align: center;
 }
 
@@ -1344,4 +1443,65 @@ body {
 
 .main-logo-con {
 	padding-top: 25%;
+}
+
+.fs-field-label {
+	font-family: 'Montserrat', serif;
+  color: #48ABE0;
+  font-size: 1.0em;
+  font-weight: bold;
+	margin-left: -15px !important;
+}
+
+.fs-fields input {
+	margin-left: -15px !important;
+	font-size: 1.0em;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+.fs-radio-group {
+	margin-left: -15px !important;
+}
+
+.fs-message-error {
+	margin-left: -9% !important;
+}
+
+#fileContainer {
+    overflow: hidden;
+    position: relative;
+		margin-left: -15px;
+}
+
+#fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+#fileContainer i {
+	margin-right: 10px;
+}
+
+#fileContainer {
+	font-size: 0.8em;
+	font-family: 'Poppins', sans-serif !important;
+  background: #48ABE0;
+  border-radius: .2em;
+  padding: .5em;
+	color: white;
+	font-weight: normal;
+}
+
+#fileContainer [type=file] {
+    cursor: pointer;
+}
 }

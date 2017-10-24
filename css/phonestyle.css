@@ -1,0 +1,49 @@
+
+@media screen and (max-width: 52.5em) {
+
+  /*Schedule Styles*/
+
+  .top-fq {
+  	margin-top: 20px !important;
+  }
+
+  .schedule-list .top-faq-txt {
+  	margin-top: 10px;
+  }
+
+  .schedule-list .inner-faq-txt {
+  	margin-top: 0px;
+  }
+
+  .schedule-list .bottom-faq-txt {
+  	margin-top: 0px;
+  	margin-bottom: 25px;
+  }
+
+  .schedule-list .last-faq-txt {
+  	margin-top: 0px;
+  	margin-bottom: 40px;
+  }
+
+  .ch-titles {
+  	margin-top: 25px !important;
+  	padding-left: 30px !important;
+  }
+
+  .last {
+  	bottom: 6%;
+  }
+
+  /*Footer Styles*/
+
+  #footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .foot {
+    height: auto;
+    padding: 10px;
+  }
+
+}
