@@ -136,28 +136,45 @@
 								<form id="myform" class="fs-form fs-form-full" autocomplete="off">
 									<ol class="fs-fields">
 										<li>
-											<label class="fs-field-label fs-anim-upper" for="q1">What is your name?</label>
+											<label class="fs-field-label fs-anim-upper" for="q1">First Name</label>
 											<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Albert E. Gator" required/>
 										</li>
 										<li>
-											<label class="fs-field-label fs-anim-upper" for="q2">Gender</label>
-											<input class="fs-anim-lower" id="q2" name="q2" type="text" required/>
+											<label class="fs-field-label fs-anim-upper" for="q1">Last Name</label>
+											<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Albert E. Gator" required/>
 										</li>
 										<li>
-											<label class="fs-field-label fs-anim-upper" for="q3">Race</label>
-											<input class="fs-anim-lower" id="q3" name="q3" type="text" required/>
-										</li>
-										<li>
-											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Email address?</label>
+											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Email Address</label>
 											<input class="fs-anim-lower" id="q4" name="q4" type="email" placeholder="gator@ufl.edu" required/>
 										</li>
-										<li>
-											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Resume?</label>
-											<label id="fileContainer"><i class="fa fa-upload" aria-hidden="true"></i>
-    										Choose a file...
-    										<input type="file"/>
-											</label>
-										</li>
+										<li data-input-trigger>
+								        <label class="fs-field-label fs-anim-upper" for="q7">Gender</label>
+								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								            <div><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">Male</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Female</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Other</label></div>
+								        </div>
+								        </li>
+										<li data-input-trigger>
+								        <label class="fs-field-label fs-anim-upper" for="q7">Race</label>
+								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								            <div><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">American Indian or Alaskan Native</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Asian</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Black or African American</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Native Hawaiian or Other Pacific Islander</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">White</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Prefer Not to Answer</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Other</label></div>
+								        </div>
+								        </li>
+								        <li data-input-trigger>
+								        <label class="fs-field-label fs-anim-upper" for="q7">Ethnicity</label>
+								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								            <div><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">Hispanic or Latino or Spanish Origin</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Not Hispanic or Latino or Spanish Origin</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Prefer Not to Answer</label></div>
+								        </div>
+								        </li>
 										<li>
 											<label class="fs-field-label fs-anim-upper" for="q6" data-info="What school are you from?">School?</label>
 											<input class="fs-anim-lower" id="q6" name="q6" type="text" placeholder="Universiy of Florida" required/>
@@ -165,22 +182,49 @@
 										<li data-input-trigger>
 								        <label class="fs-field-label fs-anim-upper" for="q7">What year are you?</label>
 								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-								            <span><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">Freshman!</label></span>
-								            <span><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Sophomore!</label></span>
-								            <span><input id="q7c" name="q7" type="radio" value="junior"/><label for="q7a" class="radio-junior">Junior!</label></span>
-								            <span><input id="q7d" name="q7" type="radio" value="senior"/><label for="q7d" class="radio-senior">Senior!</label></span>
-								            <span><input id="q7e" name="q7" type="radio" value="super-senior"/><label for="q7e" class="radio-super-senior">Super Senior!</label></span>
-								            <span><input id="q7f" name="q7" type="radio" value="na"/><label for="q7f" class="radio-na">N/A</label></span>
-								          </div>
+								            <div><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">Freshman!</label></div>
+								            <div><input id="q7b" name="q7" type="radio" value="sophomore"/><label for="q7c" class="radio-sophomore">Sophomore!</label></div>
+								            <div><input id="q7c" name="q7" type="radio" value="junior"/><label for="q7a" class="radio-junior">Junior!</label></div>
+								            <div><input id="q7d" name="q7" type="radio" value="senior"/><label for="q7d" class="radio-senior">Senior!</label></div>
+								            <div><input id="q7e" name="q7" type="radio" value="super-senior"/><label for="q7e" class="radio-super-senior">Super Senior!</label></div>
+								            <div><input id="q7f" name="q7" type="radio" value="na"/><label for="q7f" class="radio-na">N/A</label></div>
+								        </div>
 								        </li>
+								        <li>
+											<label class="fs-field-label fs-anim-upper" for="q4" data-info="We won't send you spam, we promise...">Resume?</label>
+											<label id="fileContainer"><i class="fa fa-upload" aria-hidden="true"></i>
+    										Choose a file...
+    										<input type="file"/>
+											</label>
+										</li>
+										<li>
+											<label class="fs-field-label fs-anim-upper" for="q1">Github Profile</label>
+											<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Albert E. Gator"/>
+										</li>
+										<li>
+											<label class="fs-field-label fs-anim-upper" for="q1">LinkedIn Profile</label>
+											<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Albert E. Gator"/>
+										</li>
 									      <li data-input-trigger>
 									        <label class="fs-field-label fs-anim-upper" for="q8">I would like to...</label>
 									        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-									          <span><input id="q8a" name="q8" type="radio" value="conversion"/><label for="q8b" class="radio-conversion">Hack!</label></span>
-									          <span><input id="q8b" name="q8" type="radio" value="social"/><label for="q8c" class="radio-social">Volunteer!</label></span>
-									          <span><input id="q8c" name="q8" type="radio" value="mobile"/><label for="q8a" class="radio-mobile">Mentor!</label></span>
+									          <div><input id="q8a" name="q8" type="radio" value="conversion"/><label for="q8b" class="radio-conversion">Hack!</label></div>
+									          <div><input id="q8b" name="q8" type="radio" value="social"/><label for="q8c" class="radio-social">Volunteer!</label></div>
+									          <div><input id="q8c" name="q8" type="radio" value="mobile"/><label for="q8a" class="radio-mobile">Mentor!</label></div>
 									        </div>
 									      </li>
+									    <li data-input-trigger>
+								        <label class="fs-field-label fs-anim-upper" for="q7" style="font-size:.8em">Do you agree to the MLH Code of Conduct? <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">https://static.mlh.io/docs/mlh-code-of-conduct.pdf</a></label>
+								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								            <div><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">Yes</label></div>
+								        </div>
+								        </li>
+								        <li data-input-trigger>
+								        <label class="fs-field-label fs-anim-upper" for="q7" style="font-size:.6em">I agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy. Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.*</label>
+								        <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+								            <div><input id="q7a" name="q7" type="radio" value="freshman"/><label for="q7b" class="radio-freshman">Yes</label></div>
+								        </div>
+								        </li>
 									</ol><!-- /fs-fields -->
 									<button class="fs-submit" type="submit" onClick="saveData()">Submit!</button>
 								</form><!-- /fs-form -->
@@ -223,6 +267,10 @@
 							<div class="faq-question">Can volunteers participate in hacking?</div>
 							<div class="faq-txt">
 								Unfortunately, as a volunteer, we'll need you to help out for the duration of the event. As a result, volunteers are not allowed to participate or help participants in the hackathon.
+							</div>
+							<div class="faq-question">Can Mentors participate in hacking?</div>
+							<div class="faq-txt">
+								Unfortunately, as a mentor, we'll need you to help our hackers for the duration of the event. As a result, mentors are not allowed to participate or in the hackathon, but are free to help hackers as long as they aren't contributing a substantial amount to a group's project.
 							</div>
 							<div class="faq-question">What happens after I apply?</div>
 							<div class="faq-txt">

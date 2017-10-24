@@ -1474,7 +1474,7 @@ body {
 }
 
 .fs-fields input {
-	margin-left: -15px !important;
+	margin-left: -15px;
 	font-size: 1.0em;
 	font-family: 'Poppins', sans-serif !important;
 }
@@ -1485,6 +1485,12 @@ body {
 
 .fs-message-error {
 	margin-left: -9% !important;
+}
+
+.radioFill {
+    font-size: 1.0em;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 0 !important;
 }
 
 #fileContainer {
@@ -1566,6 +1572,7 @@ body {
 [type="radio"]:not(:checked) {
     position: absolute;
     left: -9999px;
+    display: none;
 }
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label

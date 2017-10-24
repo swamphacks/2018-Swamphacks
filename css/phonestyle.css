@@ -74,5 +74,10 @@
     padding-right: 15px;
   }
 
+  .fs-radio-group {
+    margin-left: -15px !important;
+    column-count: 2;
+  }
+
 
 }
