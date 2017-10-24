@@ -70,7 +70,10 @@
 		// show [current field]/[total fields] status
 		ctrlNavPosition : true,
 		// reached the review and submit step
-		onReview : function() { return false; }
+		onReview : function() {
+
+
+			return false; }
 	};
 
 	/**
@@ -294,6 +297,7 @@
 					classie.remove( self.formEl, 'fs-form-full' );
 					classie.add( self.formEl, 'fs-form-overview' );
 					classie.add( self.formEl, 'fs-show' );
+
 					// callback
 					self.options.onReview();
 				}
@@ -404,7 +408,11 @@
 			input = fld.querySelector( 'input[required]' ) || fld.querySelector( 'textarea[required]' ) || fld.querySelector( 'select[required]' ),
 			error;
 
-		if( !input ) return true;
+		if( !input ) {
+
+			return true;
+
+		}
 
 		switch( input.tagName.toLowerCase() ) {
 			case 'input' :
@@ -440,10 +448,12 @@
 
 		if( error != undefined ) {
 			this._showError( error );
+
 			return false;
 		}
 
 		return true;
+
 	}
 
 	// TODO
