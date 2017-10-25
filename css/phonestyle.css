@@ -1,5 +1,64 @@
 
 @media screen and (max-width: 52.5em) {
+  /*book*/
+  .book {
+    position: relative;
+    margin: 0 auto;
+    width: 14em;
+    height: 22em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .bookshelf figure {
+    position: relative;
+    display: inline-block;
+    max-width: 75%;
+    width: auto;
+    vertical-align: top;
+  }
+
+  /*form*/
+  [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif !important;
+    position: relative;
+    padding-left: 14px;
+    cursor: pointer;
+    line-height: 1.25em;
+    display: inline-block;
+    color: #666;
+  }
+
+  [type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #48ABE0;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+
+  [type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+  }
+
+  /*navigation*/
+  .bb-custom-wrapper > nav {
+    display: none;
+  }
 
   /*Schedule Styles*/
 
@@ -54,6 +113,12 @@
     display: none;
   }
 
+  .footlink {
+    text-align: center;
+    padding-left: 0; /* 25/16 */
+    padding-right: 0; /* 25/16 */
+  }
+
   .linkout {
     display: block;
     text-align: center;
@@ -63,7 +128,7 @@
   .linkout a {
     font-family: 'Montserrat', serif;
     color: #48ABE0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: lighter;
     line-height: 28px;
     transition: 0.3s;
@@ -78,7 +143,6 @@
 
   .linkcontainer {
   	height: 100%;
-  	display: block;
   }
 
   .fs-radio-group {
