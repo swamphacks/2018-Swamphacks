@@ -38,7 +38,7 @@
 
 /* Views (fullscreen and overview)*/
 .fs-form-full {
-	top: 32%;
+	top: 25%;
 	margin: 0 auto;
 	width: 70%;
 }
@@ -622,7 +622,7 @@ button.fs-continue:hover {
 /* Error message */
 .fs-message-error {
 	position: absolute;
-	bottom: 75%;
+	bottom: 80%;
 	left: 50%;
 	font-family: 'Poppins', sans-serif !important;
 	max-width: 960px;
@@ -791,7 +791,7 @@ input[type=text]::-ms-clear {
 		right: 20px;
 		bottom: 20px;
 		margin: 0;
-		border-radius: .2em;
+		border-radius: 0.2em;
 		font-size: 2em;
 		z-index: 100;
 	}
