@@ -177,7 +177,51 @@
 								        </li>
 										<li>
 											<label class="fs-field-label fs-anim-upper" for="q7">School?</label>
-											<input class="fs-anim-lower" id="q7" name="q7" type="text" placeholder="Universiy of Florida" required/>
+											<!-- <input class="fs-anim-lower" id="q7" name="q7" type="text" placeholder="Universiy of Florida" required/> -->
+											<div class="dd-container">
+											<span class="custom-dropdown">
+    										<select id="selector">
+        									<option>Select...</option>
+        									<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>Sherlock Holmes</option>
+        									<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>Sherlock Holmes</option>
+        									<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>Sherlock Holmes</option>
+        									<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+													<option>The Great Gatsby</option>
+      										<option>The Great Gatsby</option>
+
+    									</select>
+											</span>
+											</div>
+
 										</li>
 										<li data-input-trigger>
 								        <label class="fs-field-label fs-anim-upper" for="q8">What year are you?</label>
@@ -765,6 +809,27 @@
 	</body>
 
 	<script>
+		//$("#selector").load("schools.txt");
+
+		function processCSV(file,parentNode){
+      var frag = document.createDocumentFragment()
+        , lines = file.split('\n')
+        , option
+        ;
+      for (var i = 0, len = lines.length; i < len; i++){
+        option = document.createElement("option");
+        option.setAttribute("value", "Choice");
+        frag.appendChild(option);
+      }
+      parentNode.appendChild(frag);
+    }
+
+		processCSV(schools.txt, selector);
+
+
+	</script>
+
+	<script>
 
 	//FIREBASE
   // var ref = new Firebase("https://swamphacks-applicants-2018.firebaseio.com/");
@@ -801,7 +866,7 @@
 		  var schoolVal = $("#q7").val();
 		  var yearVal = document.querySelector('input[name = "q8"]:checked').value;
 		  var githubVal = $("#q10").val();
-		  var linkedinVal = $("#q11").val();	
+		  var linkedinVal = $("#q11").val();
 		  // var resume = $("#q5").val();
 		  var resumeVal = "TODO";
 

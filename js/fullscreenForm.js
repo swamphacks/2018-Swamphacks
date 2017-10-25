@@ -200,14 +200,14 @@
 						} );
 						break;
 
-					/*
+
 					// for our custom select we would do something like:
-					case 'div' :
-						[].slice.call( fld.querySelectorAll( 'ul > li' ) ).forEach( function( inp ) {
+					case 'select' :
+						[].slice.call( fld.querySelectorAll( 'option' ) ).forEach( function( inp ) {
 							inp.addEventListener( 'click', function(ev) { self._nextField(); } );
 						} );
-						break;
-					*/
+					break;
+
 				}
 			}
 		} );
