@@ -727,7 +727,7 @@ a .circlebtn {
 .bb-custom-wrapper {
 	width: 100%;
 	height: 100%;
-	position: relative;
+	position: absolute;
 }
 
 .bb-custom-wrapper .bb-bookblock {
@@ -852,9 +852,6 @@ a .circlebtn {
 	    transition: transform 0.3s ease, opacity 0.3s ease;
 	}
 }
-
-componentForm.css:117
-
 }
 
 @media screen and (max-width: 33em){
