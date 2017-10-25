@@ -140,8 +140,8 @@
 
 .footlink {
   text-align: center;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 1.5625em; /* 25/16 */
+  padding-right: 1.5625em; /* 25/16 */
 }
 
 .minirow {
@@ -1350,7 +1350,7 @@ componentForm.css:117
 }
 
 .final-title{
-	margin-top: 15%;
+	margin-top: 12%;
 	width: 100%;
 	color: #333333;
 	font-size: 3em;

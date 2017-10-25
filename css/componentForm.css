@@ -527,57 +527,6 @@ button.fs-continue,
 	transition: width 0.3s ease-in-out;
 }
 
-/* Number indicator */
-.fs-numbers {
-	position: absolute;
-	top: 0;
-	right: 0;
-	overflow: hidden;
-	color: rgba(0,0,0,0.4);
-	margin: 40px;
-	width: 2em;
-	font-weight: 700;
-	font-size: 2em;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	cursor: default;
-}
-
-.fs-numbers:after {
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	content: '/';
-	font-weight: 300;
-	opacity: 0.4;
-	left: 0;
-
-}
-
-.fs-numbers span {
-	float: right;
-	width: 40%;
-	text-align: center;
-}
-
-.fs-numbers .fs-number-current {
-	float: left;
-
-}
-
-.fs-numbers .fs-number-new {
-	position: absolute;
-	left: 0;
-	-webkit-transform: translateY(100%);
-	transform: translateY(100%);
-}
-
-/* Animations for numbers */
-/* Show next number */
-.fs-numbers.fs-show-next .fs-number-new {
-	-webkit-animation: animMoveUpFromDown 0.4s both;
-	animation: animMoveUpFromDown 0.4s both;
-}
-
 @-webkit-keyframes animMoveUpFromDown {
 	from { -webkit-transform: translateY(100%); }
 	to { -webkit-transform: translateY(0); }
@@ -588,11 +537,6 @@ button.fs-continue,
 	to { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 
-.fs-numbers.fs-show-next .fs-number-current {
-	-webkit-animation: animMoveUp 0.4s both;
-	animation: animMoveUp 0.4s both;
-}
-
 @-webkit-keyframes animMoveUp {
 	to { -webkit-transform: translateY(-100%); }
 }
@@ -601,11 +545,6 @@ button.fs-continue,
 	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
 }
 
-/* Show previous number */
-.fs-numbers.fs-show-prev .fs-number-new {
-	-webkit-animation: animMoveDownFromUp 0.4s both;
-	animation: animMoveDownFromUp 0.4s both;
-}
 
 @-webkit-keyframes animMoveDownFromUp {
 	from { -webkit-transform: translateY(-100%); }
@@ -615,11 +554,6 @@ button.fs-continue,
 @keyframes animMoveDownFromUp {
 	from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
 	to { -webkit-transform: translateY(0); transform: translateY(0); }
-}
-
-.fs-numbers.fs-show-prev .fs-number-current {
-	-webkit-animation: animMoveDown 0.4s both;
-	animation: animMoveDown 0.4s both;
 }
 
 @-webkit-keyframes animMoveDown {
@@ -691,7 +625,6 @@ button.fs-continue:hover {
 	bottom: 75%;
 	left: 50%;
 	font-family: 'Poppins', sans-serif !important;
-	z-index: 800;
 	max-width: 960px;
 	width: 70%;
 	color: #eb7e7f;
@@ -851,14 +784,16 @@ input[type=text]::-ms-clear {
 
 	.fs-nav-dots {
 		right: 25px;
+		z-index: 200;
 	}
 
 	button.fs-continue {
 		right: 20px;
 		bottom: 20px;
 		margin: 0;
-		border-radius: 50%;
+		border-radius: .2em;
 		font-size: 2em;
+		z-index: 100;
 	}
 
 	button.fs-continue::before {
@@ -867,7 +802,6 @@ input[type=text]::-ms-clear {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		content: '\27A1';
 		text-align: center;
 		font-size: 1em;
 		line-height: 50px;
