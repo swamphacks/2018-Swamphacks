@@ -2015,14 +2015,6 @@
 		<script src="js/fullscreenForm.js"></script>
 	</body>
 	<script>
-        var fileButton = document.getElementById("resumeBtn");
-        fileButton.addEventListener('change', function(e){
-            var file = e.target.files[0];
-            var storageRef = firebase.storage().ref().child('resumes/' + file.name);
-            storageRef.put(file);
-        });
-    </script>
-	<script>
 
 	//FIREBASE
   // var ref = new Firebase("https://swamphacks-applicants-2018.firebaseio.com/");
@@ -2060,8 +2052,8 @@
 		  var yearVal = document.querySelector('input[name = "q8"]:checked').value;
 		  var githubVal = $("#q10").val();
 		  var linkedinVal = $("#q11").val();
-		  // var resume = $("#q5").val();
-		  var resumeVal = "TODO";
+		  var file = document.getElementById("resumeBtn").files[0];
+          var storageRef = firebase.storage().ref().child('resumes/' + file.name);
 
 		  var emailKeyFormat = removeSpecial(emailVal);
 
@@ -2078,6 +2070,7 @@
 				git: githubVal,
 				linkedin: linkedinVal
 	      	});
+      		storageRef.put(file);
 	      	console.log('Success! Applicant Added.');
 	      	slideFade($('.fs-form-wrap'));
 		    $(".success-form").css("display", "flex");
