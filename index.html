@@ -181,7 +181,7 @@
 											<div class="dd-container">
 											<span class="custom-dropdown">
     										<select class="q7" id="q7" name="q7">
-	        									<option id='ABES Engineering College'>ABES Engineering College</option>
+	        							<option id='ABES Engineering College'>ABES Engineering College</option>
 												<option id='ABES Engineering College'>ABES Engineering College</option>
 												<option id='AGH University of Science and Technology'>AGH University of Science and Technology</option>
 												<option id='Aalto University'>Aalto University</option>
@@ -1435,7 +1435,7 @@
 								        <li>
 											<label class="fs-field-label fs-anim-upper resume" for="q9">Resume?</label>
 											<label id="fileContainer"><i class="fa fa-upload" aria-hidden="true"></i>
-    										Choose a file...
+    										Choose a file
     										<input type="file" id="resumeBtn"required/>
 											</label>
 										</li>
@@ -2020,7 +2020,7 @@
             var file = e.target.files[0];
             var storageRef = firebase.storage().ref().child('resumes/' + file.name);
             storageRef.put(file);
-        });  
+        });
     </script>
 	<script>
 

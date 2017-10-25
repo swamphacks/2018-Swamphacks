@@ -755,11 +755,12 @@ input[type=text]::-ms-clear {
 
 	.fs-form-wrap #myform {
 		font-size: 1.8em;
-		overflow-x: hidden;
+		/*overflow-x: hidden;*/
 
 	}
 
 	.fs-form {
+
 		/*top: 6em;
 		right: 2em;
 		left: 0;
