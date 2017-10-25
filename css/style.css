@@ -1705,6 +1705,7 @@ body {
   right: 1.2em;
   top: 50%;
   margin-top: -.5em;
+	content: "\25BC";
 }
 
 .custom-dropdown::before { /*  Custom dropdown arrow cover */
