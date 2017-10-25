@@ -1606,8 +1606,8 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 18px;
-    height: 18px;
+    width: 1.125em; /* 18/16 */
+    height: 1.125em; /* 18/16 */
     border: 1px solid #ddd;
     border-radius: 100%;
     background: #fff;
@@ -1615,8 +1615,8 @@ body {
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 0.75em; /* 12/16 */
+    height: 0.75em; /* 12/16 */
     background: #48ABE0;
     position: absolute;
     top: 3px;
@@ -1680,7 +1680,8 @@ body {
   border: 0;
   margin: 0;
   text-indent: 0.01px;
-  text-overflow: '';
+  max-width: 50%;
+  text-overflow: ellipsis;
   /*Hiding the select arrow for firefox*/
   -moz-appearance: none;
   /*Hiding the select arrow for chrome*/
@@ -1695,13 +1696,11 @@ body {
 
 .custom-dropdown::before,
 .custom-dropdown::after {
-  content: "";
   position: absolute;
   pointer-events: none;
 }
 
 .custom-dropdown::after { /*  Custom dropdown arrow */
-  content: "\25BC";
   height: 1em;
   font-size: .625em;
   line-height: 1;
@@ -1725,4 +1724,8 @@ body {
 
 .custom-dropdown select[disabled] {
   color: rgba(0,0,0,.25);
+}
+
+#q7 option{
+ width: 50%;   
 }

@@ -583,6 +583,7 @@ button.fs-continue {
 	bottom: 0;
 	right: 0;
 	float: right;
+	z-index: 2000;
 }
 
 .fs-form-overview .fs-submit {
@@ -754,6 +755,7 @@ input[type=text]::-ms-clear {
 
 	.fs-form-wrap #myform {
 		font-size: 1.8em;
+		overflow-x: hidden;
 
 	}
 
