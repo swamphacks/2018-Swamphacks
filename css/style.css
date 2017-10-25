@@ -115,6 +115,7 @@
 	border-radius: 10px;
 	margin: 15px;
 	height: auto;
+	min-height: 75%;
 	width: auto;
 	position: absolute;
 	top: 60px;
