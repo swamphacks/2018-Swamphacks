@@ -212,6 +212,10 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-}
+  }
+
+  #dropdown-wrapper {
+  	height: 100px;
+  }
 
 }

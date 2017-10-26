@@ -193,9 +193,13 @@
 											<label class="fs-field-label fs-anim-upper" for="q7">School? *</label>
 											<!-- <input class="fs-anim-lower" id="q7" name="q7" type="text" placeholder="Universiy of Florida" required/> -->
 											<div class="dd-container">
-											<span class="custom-dropdown">
-    										<select class="q7" id="q7" name="q7">
-	        									<option id='ABES Engineering College'>ABES Engineering College</option>
+											<!-- <span class="custom-dropdown"> -->
+											<span>
+
+												<input class="fs-anim-lower" type="text" value="" id="search-schools"></input>
+												<div id="dropdown-wrapper"><ul id="autocomplete-results"></ul></div>
+    										<!-- <select class="q7" id="q7" name="q7">
+	        							<option id='ABES Engineering College'>ABES Engineering College</option>
 												<option id='ABES Engineering College'>ABES Engineering College</option>
 												<option id='AGH University of Science and Technology'>AGH University of Science and Technology</option>
 												<option id='Aalto University'>Aalto University</option>
@@ -1134,7 +1138,7 @@
 												<option id='The University of Nottingham'>The University of Nottingham</option>
 												<option id='The University of Oklahoma'>The University of Oklahoma</option>
 												<option id='The University of Ontario Institute of Technology'>The University of Ontario Institute of Technology</option>
-												<option id='The University of Oregon'>The University of Oregon</option>
+												<option id='The University of Oregon' value='The University of Oregon'>The University of Oregon</option>
 												<option id='The University of Ottawa'>The University of Ottawa</option>
 												<option id='The University of Oulu'>The University of Oulu</option>
 												<option id='The University of Oxford'>The University of Oxford</option>
@@ -1430,7 +1434,7 @@
 												<option id='Universidad Interamericana de Puerto Rico'>Universidad Interamericana de Puerto Rico</option>
 												<option id='Maine South High School'>Maine South High School</option>
 												<option id='American High School'>American High School</option>
-											</select>
+											</select> -->
 											</span>
 											</div>
 
@@ -2039,6 +2043,7 @@
 		<script src="js/bookshelf.js"></script>
 		<script src="js/selectFx.js"></script>
 		<script src="js/fullscreenForm.js"></script>
+		<script src="js/jquerycsv.js"></script>
 	</body>
 	<script>
 
@@ -2074,7 +2079,8 @@
 		  var genderVal = document.querySelector('input[name = "q4"]:checked').value;
 		  var raceVal = document.querySelector('input[name = "q5"]:checked').value;
 		  var ethnVal = document.querySelector('input[name = "q6"]:checked').value;
-		  var schoolVal = $('#q7 option:selected').text();
+		  // var schoolVal = $('#q7 option:selected').text();
+			var schoolVal = $("#search-schools").val();
 		  var yearVal = document.querySelector('input[name = "q8"]:checked').value;
 		  var githubVal = $("#q10").val();
 		  var linkedinVal = $("#q11").val();
@@ -2106,14 +2112,100 @@
 		    $(".success-form").css("display", "flex");
 		    //bookblock.close();
       	  } else {
-	        console.log('Put a valid email.');
+	        console.log('Not a valid email.');
 	    }
 	    return false;
 	  })
 	 })
   </script>
 
+	<script>
 
+	</script>
+
+	<script>
+	var school_list = [];
+	var schools = [];
+	var input = document.getElementById('search-schools');
+	$(document).ready(function() {
+	   "use strict";
+	    $.ajax({
+	        type: "GET",
+	        url: "https://raw.githubusercontent.com/MLH/mlh-policies/master/schools.csv",
+	        dataType: "text",
+	        success: function(data) {
+						processData(data);
+
+					}
+	     });
+	});
+
+	function processData(data) {
+	    "use strict";
+	    schools = $.csv.toArrays(data);
+
+	}
+
+
+
+var results;
+
+// functions
+function autocomplete(val) {
+
+var schools_return = [];
+val = val.toLowerCase();
+var searchTerm = "";
+
+for (i = 0; i < schools.length; i++) {
+
+	if (val === schools[i][0].slice(0, val.length).toLowerCase()) {
+		schools_return.push(schools[i][0]);
+	}
+}
+
+return schools_return;
+}
+
+// events
+input.onkeyup = function(e) {
+input_val = this.value; // updates the variable on each ocurrence
+
+if (input_val.length > 0) {
+	var schools_to_show = [];
+
+	autocomplete_results = document.getElementById("autocomplete-results");
+	autocomplete_results.innerHTML = '';
+	schools_to_show = autocomplete(input_val);
+
+	for (i = 0; i < schools_to_show.length; i++) {
+		var id = schools_to_show[i];
+
+		school_list = schools_to_show.slice(0)
+		autocomplete_results.innerHTML += '<li class="school-option" id="' + id + '" >' + schools_to_show[i] + '</li>';
+
+	}
+	autocomplete_results.style.display = 'block';
+	$('#dropdown-wrapper').css('display', 'block');
+} else {
+	schools_to_show = [];
+	autocomplete_results.innerHTML = '';
+	$('#dropdown-wrapper').css('display', 'none');
+}
+}
+
+$("#autocomplete-results").on("click", "li", function(e){
+	var $target = $(e.target);
+	var index = $target.index();
+
+	$("#search-schools").val(school_list[index]);
+	schools_to_show = [];
+	autocomplete_results.innerHTML = '';
+	$('#dropdown-wrapper').css('display', 'none');
+
+});
+
+	  </script>
 
 	<script>
 	//return true if char is a number
