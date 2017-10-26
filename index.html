@@ -1442,7 +1442,7 @@
 								        <li data-input-trigger>
 											<label class="fs-field-label fs-anim-upper resume" for="q9">Resume? *</label>
 											<label id="fileContainer"><i class="fa fa-upload" aria-hidden="true"></i>
-    										Choose a file
+    										<span id="filetext">Choose a file</span>
     										<input type="file" id="resumeBtn" required/>
 											</label>
 										</li>
@@ -2159,6 +2159,7 @@
 
 		document.getElementById("fileContainer").onchange = function () {
     	$("#fileContainer").css("backgroundColor", "#6C9668");
+			$("#filetext").text("Got it! ");
 		};
 
 	</script>
