@@ -95,6 +95,7 @@
 	left: 0;
 	top: -60px;
 	z-index: 1000;
+	display: none;
 }
 
 .foot {

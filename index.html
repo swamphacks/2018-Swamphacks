@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-		<title>Swamphacks 2018</title>
+		<title>SwampHacks 2018</title>
 		<meta name="description" content="
 
 		SwampHacks is a 36 hour open coding event where students become creators.
@@ -2133,18 +2133,21 @@
 		}
 		function openBook() {
 			//$('.header').addClass('small-header');
-			$(".header").css("top", "0px");
-			$(".head").css("height", "60px");
-			$(".tabletop").addClass("book-open-tabletop");
-			// slideFade($('#logo'));
-			// slideFade($('#mainheader'));
-			// slideFade($('#headercaption'));
-			$('.shbook').removeClass('rotatedBefore');
-			$('.shbook').addClass('rotated');
+			$(".header").css("display", "block");
+			setTimeout(function() {
+				$(".header").css("top", "0px");
+				$(".head").css("height", "60px");
+				$(".tabletop").addClass("book-open-tabletop");
+				// slideFade($('#logo'));
+				// slideFade($('#mainheader'));
+				// slideFade($('#headercaption'));
+				$('.shbook').removeClass('rotatedBefore');
+				$('.shbook').addClass('rotated');
+			},100);
 			setTimeout(function() {
 				$(".book").css("display", "none");
+				$("#bookhome").css("display", "none");
 			},100);
-			$("#bookhome").css("display", "none");
 			// $('.book').css("display", "none");
 			// $('.perspective').css("display", "none");
 		}
