@@ -2157,12 +2157,16 @@
 		//Function content goes here
 		}
 
-		document.getElementById("fileContainer").onchange = function () {
-    	$("#fileContainer").css("backgroundColor", "#6C9668");
-			$("#filetext").text("Got it! ");
-		};
+		document.getElementById("resumeBtn").onchange = function () {
+
+			$("#fileContainer").css("backgroundColor", "#6C9668");
+			var value = this.value.split(/[\/\\]/).pop();
+			$("#filetext").text(value.replace(/\.[^/.]+$/, ""));
+
+		}
 
 	</script>
+	
 	<script>
 		(function() {
 		var formWrap = document.getElementById( 'fs-form-wrap' );
