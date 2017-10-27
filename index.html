@@ -2080,7 +2080,7 @@
 		  var raceVal = document.querySelector('input[name = "q5"]:checked').value;
 		  var ethnVal = document.querySelector('input[name = "q6"]:checked').value;
 		  // var schoolVal = $('#q7 option:selected').text();
-			var schoolVal = $("#search-schools").val();
+		  var schoolVal = $("#search-schools").val();
 		  var yearVal = document.querySelector('input[name = "q8"]:checked').value;
 		  var githubVal = $("#q10").val();
 		  var linkedinVal = $("#q11").val();
@@ -2159,7 +2159,7 @@ var searchTerm = "";
 
 for (i = 0; i < schools.length; i++) {
 
-	if (val === schools[i][0].slice(0, val.length).toLowerCase()) {
+	if (schools[i][0].toLowerCase().includes(val)) {
 		schools_return.push(schools[i][0]);
 	}
 }
@@ -2167,32 +2167,49 @@ for (i = 0; i < schools.length; i++) {
 return schools_return;
 }
 
-// events
-input.onkeyup = function(e) {
-input_val = this.value; // updates the variable on each ocurrence
+var typingTimer;                //timer identifier
+var doneTypingInterval = 400;  //time in ms, 5 second for example
 
-if (input_val.length > 0) {
-	var schools_to_show = [];
+//on keyup, start the countdown
+input.onkeyup = function() {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+}
 
-	autocomplete_results = document.getElementById("autocomplete-results");
-	autocomplete_results.innerHTML = '';
-	schools_to_show = autocomplete(input_val);
+//on keydown, clear the countdown 
+input.onkeydown = function(e) {
+  clearTimeout(typingTimer);
+}
 
-	for (i = 0; i < schools_to_show.length; i++) {
-		var id = schools_to_show[i];
+//user is "finished typing," do something
+function doneTyping () {
+  input_val = $("#search-schools").val(); // updates the variable on each ocurrence
 
-		school_list = schools_to_show.slice(0)
-		autocomplete_results.innerHTML += '<li class="school-option" id="' + id + '" >' + schools_to_show[i] + '</li>';
+	if (input_val.length > 3) {
+		var schools_to_show = [];
 
+		autocomplete_results = document.getElementById("autocomplete-results");
+		autocomplete_results.innerHTML = '';
+		schools_to_show = autocomplete(input_val);
+
+		for (i = 0; i < schools_to_show.length; i++) {
+			var id = schools_to_show[i];
+
+			school_list = schools_to_show.slice(0)
+			autocomplete_results.innerHTML += '<li class="school-option" id="' + id + '" >' + schools_to_show[i] + '</li>';
+
+		}
+		autocomplete_results.style.display = 'block';
+		$('#dropdown-wrapper').css('display', 'block');
+	} else {
+		schools_to_show = [];
+		autocomplete_results.innerHTML = '';
+		$('#dropdown-wrapper').css('display', 'none');
 	}
-	autocomplete_results.style.display = 'block';
-	$('#dropdown-wrapper').css('display', 'block');
-} else {
-	schools_to_show = [];
-	autocomplete_results.innerHTML = '';
-	$('#dropdown-wrapper').css('display', 'none');
 }
-}
+
+// events
+
 
 $("#autocomplete-results").on("click", "li", function(e){
 	var $target = $(e.target);
