@@ -229,7 +229,7 @@
 	 * jumps to the next field
 	 */
 	FForm.prototype._nextField = function( backto ) {
-		if( this.isLastStep || !this._validade() || this.isAnimating ) {
+		if( this.isLastStep || (!this._validade() && backto ==undefined) || this.isAnimating ) {
 			return false;
 		}
 		this.isAnimating = true;
