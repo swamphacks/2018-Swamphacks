@@ -189,7 +189,7 @@
 								            <div><input id="q6c" name="q6" type="radio" value="Prefer Not to Answer"/><label for="q6c" class="radio-sophomore">Prefer Not to Answer</label></div>
 								        </div>
 								        </li>
-										<li data-input-trigger>
+										<li>
 											<label class="fs-field-label fs-anim-upper" for="q7">School? *</label>
 											<!-- <input class="fs-anim-lower" id="q7" name="q7" type="text" placeholder="Universiy of Florida" required/> -->
 											<div class="dd-container">
@@ -1450,7 +1450,7 @@
 								            <div><input id="q8f" name="q8" type="radio" value="na"/><label for="q8f" class="radio-na">N/A</label></div>
 								        </div>
 								        </li>
-								        <li data-input-trigger>
+								        <li>
 											<label class="fs-field-label fs-anim-upper resume" for="q9">Resume? *</label>
 											<label id="fileContainer"><i class="fa fa-upload" aria-hidden="true"></i>
     										<span id="filetext">Choose a file</span>
@@ -2168,7 +2168,7 @@ return schools_return;
 }
 
 var typingTimer;                //timer identifier
-var doneTypingInterval = 400;  //time in ms, 5 second for example
+var doneTypingInterval = 175;  //time in ms, 5 second for example
 
 //on keyup, start the countdown
 input.onkeyup = function() {
@@ -2185,7 +2185,7 @@ input.onkeydown = function(e) {
 function doneTyping () {
   input_val = $("#search-schools").val(); // updates the variable on each ocurrence
 
-	if (input_val.length > 3) {
+	if (input_val.length > 2) {
 		var schools_to_show = [];
 
 		autocomplete_results = document.getElementById("autocomplete-results");
