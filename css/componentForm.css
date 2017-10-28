@@ -105,6 +105,7 @@
 .fs-progress,
 .fs-numbers,
 button.fs-continue,
+button.fs-back,
 .fs-message-error,
 .fs-message-final {
 	visibility: hidden;
@@ -465,7 +466,7 @@ button.fs-continue,
 /* Dot navigation */
 .fs-nav-dots {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	right: 60px;
 	left: auto;
 	-webkit-transform: translateY(-50%);
@@ -476,9 +477,9 @@ button.fs-continue,
 	position: relative;
 	display: block;
 	padding: 0;
-	margin: 16px 0;
-	width: 16px;
-	height: 16px;
+	margin: 1em 0;
+	width: 1em;
+	height: 1em;
 	border-radius: 50%;
 	background: transparent;
 	-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
@@ -566,7 +567,8 @@ button.fs-continue,
 
 /* Continue button and submit button */
 button.fs-submit,
-button.fs-continue {
+button.fs-continue,
+button.fs-back {
 	font-size: 0.8em;
 	font-family: 'Poppins', sans-serif !important;
 	background: #48ABE0;
@@ -599,9 +601,18 @@ button.fs-continue {
 	font-size: 1.25em;
 }
 
+button.fs-back {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 0 40px 60px 0;
+	font-size: 1.25em;
+}
+
 button.fs-submit:hover,
 button.fs-submit:focus,
-button.fs-continue:hover {
+button.fs-continue:hover, 
+button.fs-back:hover {
 	background: #232529;
 	color: #fff;
 }
@@ -616,6 +627,19 @@ button.fs-continue:hover {
 	background: transparent;
 	color: rgba(0,0,0,0.3);
 	content: 'Press ENTER';
+	font-size: 0.65em;
+	pointer-events: none;
+}
+
+.fs-back::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: transparent;
+	color: rgba(0,0,0,0.3);
 	font-size: 0.65em;
 	pointer-events: none;
 }
@@ -792,10 +816,19 @@ input[type=text]::-ms-clear {
 
 	button.fs-continue {
 		right: 20px;
-		bottom: 20px;
+		bottom: 40px;
 		margin: 0;
 		border-radius: 0.2em;
-		font-size: 2em;
+		font-size: 1.5em;
+		z-index: 100;
+	}
+
+	button.fs-back {
+		left: 20px;
+		bottom: 40px;
+		margin: 0;
+		border-radius: 0.2em;
+		font-size: 1.5em;
 		z-index: 100;
 	}
 
@@ -811,6 +844,10 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-continue::after {
+		content: '';
+	}
+
+	.fs-back::after {
 		content: '';
 	}
 

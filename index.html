@@ -850,8 +850,7 @@
 		  var file = document.getElementById("resumeBtn").files[0];
 		  var firstTime = document.querySelector('input[name = "q14"]:checked').value;
 		  var howHeard = $("#q15").val();
-          var storageRef = firebase.storage().ref().child('resumes/' + fnameVal +'-'+lnameVal+'-'+file.name);
-
+          
 		  var emailKeyFormat = removeSpecial(emailVal);
 
 	      if (validateEmail(emailVal)) {
@@ -869,7 +868,12 @@
 				firstT: firstTime,
 				marketing: howHeard
 	      	});
-      		storageRef.put(file);
+
+	      	if(file) {
+		  		var storageRef = firebase.storage().ref().child('resumes/' + fnameVal +'-'+lnameVal+'-'+file.name);
+		  		storageRef.put(file);
+		  	}
+      		
 	      	console.log('Success! Applicant Added.');
 	      	slideFade($('.fs-form-wrap'));
 		    $(".success-form").css("display", "flex");

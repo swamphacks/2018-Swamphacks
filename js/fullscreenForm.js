@@ -121,6 +121,9 @@
 		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
 		this._showCtrl( this.ctrlContinue );
 
+		this.ctrlBack = createElement( 'button', { cName : 'fs-back', inner : 'Back', appendTo : this.ctrls } );
+		this._showCtrl( this.ctrlBack );
+
 		// navigation dots
 		if( this.options.ctrlNavDots ) {
 			this.ctrlNav = createElement( 'nav', { cName : 'fs-nav-dots', appendTo : this.ctrls } );
@@ -169,9 +172,14 @@
 	FForm.prototype._initEvents = function() {
 		var self = this;
 
+
 		// show next field
 		this.ctrlContinue.addEventListener( 'click', function() {
 			self._nextField();
+		} );
+
+		this.ctrlBack.addEventListener( 'click', function() {
+			self._showField(1.5);
 		} );
 
 		// navigation dots
@@ -229,7 +237,8 @@
 	 * jumps to the next field
 	 */
 	FForm.prototype._nextField = function( backto ) {
-		if( this.isLastStep || (!this._validade() && backto ==undefined) || this.isAnimating ) {
+		console.log(backto);
+		if( this.isLastStep || (!this._validade() && backto==undefined) || this.isAnimating ) {
 			return false;
 		}
 		this.isAnimating = true;
@@ -247,7 +256,12 @@
 		this.navdir = backto !== undefined ? backto < this.current ? 'prev' : 'next' : 'next';
 
 		// update current field
-		this.current = backto !== undefined ? backto : this.current + 1;
+		if(backto === 1.5) {
+			this.current = this.current-1;
+		} else {
+			this.current = backto !== undefined ? backto : this.current + 1;
+		}
+		
 
 		if( backto === undefined ) {
 			// update progress bar (unless we navigate backwards)
@@ -292,6 +306,7 @@
 					self._hideCtrl( self.ctrlNav );
 					self._hideCtrl( self.ctrlProgress );
 					self._hideCtrl( self.ctrlContinue );
+					self._hideCtrl( self.ctrlBack );
 					self._hideCtrl( self.ctrlFldStatus );
 					// replace class fs-form-full with fs-form-overview
 					classie.remove( self.formEl, 'fs-form-full' );
@@ -336,7 +351,7 @@
 	 * jumps to the field at position pos
 	 */
 	FForm.prototype._showField = function( pos ) {
-		if( pos === this.current || pos < 0 || pos > this.fieldsCount - 1 ) {
+		if( pos === this.current || pos < 0 || ( pos === 1.5 && this.current === 0) || pos > this.fieldsCount - 1 ) {
 			return false;
 		}
 		this._nextField( pos );
