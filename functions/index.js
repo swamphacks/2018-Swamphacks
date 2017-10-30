@@ -26,7 +26,7 @@ exports.subscribeUser = functions.database.ref('applicants/{id}').onCreate(event
     var url = 'https://us10.api.mailchimp.com/3.0/lists/fda6f8d99c/members';
     var method = 'POST';
     var headers = {
-      'authorization': "Basic " + btoa('randomstring:' + MAILCHIMP_API_KEY),
+      'authorization': "Basic " + btoa('anystring:' + MAILCHIMP_API_KEY),
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     };
