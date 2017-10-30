@@ -54,7 +54,7 @@ exports.subscribeUser = functions.database.ref('applicants/{id}').onCreate(event
       body
     }).then(resp => resp.json()).then(resp => {
       console.log(resp)
-      admin.database().ref('applicants/' + id + '/subscribed').set(true);
+      admin.database().ref('applicants/' + id + '/subscribedToMail').set("true");
     });
   }
 
