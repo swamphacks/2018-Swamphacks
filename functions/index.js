@@ -21,13 +21,11 @@ exports.subscribeUser = functions.database.ref('applicants/{id}').onCreate(event
 
   function createFetch() {
 
-    var MAILCHIMP_API_KEY = 'db9fcaff92e758c7dc712141fd6c3859-us10';
-
     var url = 'https://us10.api.mailchimp.com/3.0/lists/fda6f8d99c/members';
     var method = 'POST';
     var headers = {
       // 'Authorization': "" + btoa('anystring:' + MAILCHIMP_API_KEY),
-      'Authorization': 'randomUser db9fcaff92e758c7dc712141fd6c3859-us10',
+      'Authorization': 'randomUser' +  MAILCHIMP_API_KEY,
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     };
