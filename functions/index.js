@@ -25,7 +25,7 @@ exports.subscribeUser = functions.database.ref('applicants/{id}').onCreate(event
     var method = 'POST';
     var headers = {
       // 'Authorization': "" + btoa('anystring:' + MAILCHIMP_API_KEY),
-      'Authorization': 'randomUser' +  MAILCHIMP_API_KEY,
+      'Authorization': 'randomUser b49736c52fc0d104c18d4d8f77460b22-us10',
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     };
