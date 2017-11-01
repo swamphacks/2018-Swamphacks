@@ -218,4 +218,39 @@
   	height: 100px;
   }
 
+  .sm-sp {
+    max-width: 180px;
+    width: 180px;
+  }
+
+  .big-sp {
+  	width: 500px;
+  }
+
+  .inner-row a {
+    display: block;
+  }
+
+  #fbimg {
+    margin-bottom: 5px;
+  }
+
+  #microsoftimg {
+  	margin-left: 0px;
+    margin-top: 20px;
+  }
+
+  .inner-row {
+  	padding-top: 0px;
+  	padding-bottom: 20px;
+  }
+
+  #stickermulelogo {
+  	margin-top: 5px;
+  }
+
+  .sp-logo {
+
+  }
+
 }

@@ -227,20 +227,6 @@ a .circlebtn {
 	background: white;
 }
 
-.big-sp {
-	width: 50%;
-}
-
-.big-sp:hover,
-.big-sp:focus {
-	cursor: pointer;
-}
-
-.med-sp:hover,
-.med-sp:focus {
-	cursor: pointer;
-}
-
 .bottom-row {
 	margin-top: 50px;
 	margin-bottom: 100px;
@@ -255,60 +241,55 @@ a .circlebtn {
 	cursor: pointer;
 }
 
-.med-sp {
-	max-width: 75%;
+.med-sp:hover,
+.med-sp:focus {
+	cursor: pointer;
+}
 
+.big-sp:hover,
+.big-sp:focus {
+	cursor: pointer;
 }
 
 .sm-sp {
-	max-width: 70%;
+  width: 180px;
 }
 
-.container {
-
+.big-sp {
+	width: 500px;
 }
 
-
-#twitterimg {
-	max-width: 50%;
+.inner-row {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-#nvidiaimg {
-	margin-top: 30px;
+.inner-row div {
+	display: inline;
 }
 
-#airimg {
-	margin-top: 20px;
+.bottom-sp-row {
+	margin-bottom: 100px !important;
 }
 
-#techimg {
-	max-width: 60%;
-	margin-top: 10px;
+#stickermulelogo {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: -20px;
 }
 
-#fbimg {
-	max-width: 80%;
+#microsoftimg {
+	margin-left: 20px;
 }
 
-#bloomimg {
-	margin-top: 30px;
-}
-
-#livegreenimg {
-	margin-top: 30px;
-}
-
-#amazonimg {
-	margin-top: 30px;
-}
-
-#googleimg {
-	margin-top: 15px;
+.herontitle {
+	margin-top: 40px;
 }
 
 .sp-row {
-	margin-top: 50px;
-	margin-bottom: 50px;
+	/*padding-top: 50px;
+	padding-bottom: 50px;*/
 }
 
 /* Bob */
