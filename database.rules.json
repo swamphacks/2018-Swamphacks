@@ -1,6 +1,0 @@
-{
-  "rules": {
-    ".read": "auth != false",
-    ".write": "auth != false"
-  }
-}
