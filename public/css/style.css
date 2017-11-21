@@ -273,6 +273,10 @@ a .circlebtn {
 	margin-bottom: 100px !important;
 }
 
+#fbimg {
+	padding: 10px;
+}
+
 #stickermulelogo {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -281,6 +285,31 @@ a .circlebtn {
 
 #microsoftimg {
 	margin-left: 20px;
+}
+
+#exxonimg {
+	margin-left: 30px;
+	margin-top: 6px;
+}
+
+@media(min-width: 990px) {
+
+	#exxonimg {
+		padding-top: 40px;
+	}
+}
+
+@media(max-width: 840px) {
+
+	#exxonimg {
+		margin-left: 0px;
+		margin-top: 0px;
+		padding-top: 40px;
+	}
+
+	#cubeslogo {
+		padding-top: 40px;
+	}
 }
 
 .herontitle {
