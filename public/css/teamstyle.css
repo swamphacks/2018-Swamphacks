@@ -853,11 +853,21 @@ body {
   margin-left: 5px;
 }
 
+@media(max-width: 1000px) {
+  .fillerblk {
+    display: none;
+  }
+}
+
 @media(min-width: 1000px) {
 
   .wrapper-demo {
       display: inline-block;
 
+  }
+
+  .fillerblk {
+    display: block;
   }
 
   .titlecon {
