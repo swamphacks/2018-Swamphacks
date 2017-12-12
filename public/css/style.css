@@ -256,7 +256,7 @@ a .circlebtn {
 }
 
 .big-sp {
-	width: 500px;
+	width: 700px;
 }
 
 .inner-row {
@@ -273,6 +273,24 @@ a .circlebtn {
 	margin-bottom: 100px !important;
 }
 
+#bahimg {
+	margin-bottom: 20px;
+}
+
+#homelogo {
+	max-width: 150px;
+	padding: 4px;
+	margin-right: 30px;
+}
+
+#amexlogo {
+	max-width: 150px;
+}
+
+#jplogo {
+	width: 440px;
+}
+
 #fbimg {
 	padding: 10px;
 }
@@ -284,19 +302,31 @@ a .circlebtn {
 }
 
 #microsoftimg {
-	margin-left: 20px;
+	margin-right: 20px;
 }
 
 #exxonimg {
 	margin-left: 30px;
-	margin-top: 6px;
+	margin-top: 0px;
+}
+
+#ultimatelogo {
+	margin-left: 30px;
+	margin-right: 30px;
+	max-width: 160px;
+}
+
+#pglogo {
+	max-width: 120px;
+}
+
+#gelogo {
+	max-width: 100px;
 }
 
 @media(min-width: 990px) {
 
-	#exxonimg {
-		padding-top: 40px;
-	}
+
 }
 
 @media(max-width: 840px) {
@@ -305,10 +335,45 @@ a .circlebtn {
 		margin-left: 0px;
 		margin-top: 0px;
 		padding-top: 40px;
+		margin-bottom: 15px;
+	}
+
+	#ultimatelogo {
+		margin-left: 30px;
+		margin-right: 30px;
+		max-width: 160px;
+		margin-top: 5px;
+		margin-bottom: 30px;
+	}
+
+	#pglogo {
+		max-width: 120px;
+		margin-bottom: 30px;
+	}
+
+	#microsoftimg {
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+
+	#jplogo {
+		width: 350px !important;
 	}
 
 	#cubeslogo {
 		padding-top: 40px;
+	}
+
+	#homelogo {
+		max-width: 150px;
+		padding: 4px;
+		margin-right: 0px;
+		margin-top: 5px;
+	}
+
+	#amexlogo {
+		max-width: 150px;
+		margin-top: 30px;
 	}
 }
 
