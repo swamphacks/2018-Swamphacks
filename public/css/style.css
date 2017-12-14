@@ -1415,7 +1415,7 @@ a .circlebtn {
 .last{
 	position: absolute;
 	left: 50%;
-	margin-left: -20%;
+	margin-left: -25%;
 	bottom: 20%;
 	height: 40%;
 }
