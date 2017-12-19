@@ -1718,6 +1718,18 @@ body {
 #myform {
 }
 
+.message-form {
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	font-size: 4em;
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #6C9668 !important;
+}
+
 .success-form {
 	z-index: 10000;
 	width: 100%;
