@@ -291,6 +291,11 @@ a .circlebtn {
 	width: 440px;
 }
 
+#rtlogo {
+	width: 420px;
+	margin-bottom: 20px;
+}
+
 #ielogo {
 	width: 440px;
 }
@@ -361,6 +366,14 @@ a .circlebtn {
 	}
 
 	#jplogo {
+		width: 350px !important;
+	}
+
+	#rtlogo {
+		width: 350px !important;
+	}
+
+	#ielogo {
 		width: 350px !important;
 	}
 
@@ -1731,7 +1744,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
 	color: #6C9668 !important;
 }
 
