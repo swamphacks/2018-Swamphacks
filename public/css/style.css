@@ -328,6 +328,10 @@ a .circlebtn {
 	max-width: 100px;
 }
 
+#chwylogo {
+	max-width: 120px;
+}
+
 @media(min-width: 990px) {
 
 
