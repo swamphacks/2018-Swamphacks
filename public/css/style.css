@@ -291,6 +291,11 @@ a .circlebtn {
 	width: 440px;
 }
 
+#rtlogo {
+	width: 420px;
+	margin-bottom: 20px;
+}
+
 #ielogo {
 	width: 440px;
 }
@@ -329,6 +334,8 @@ a .circlebtn {
 }
 
 #chwylogo {
+	margin-left: 30px;
+	margin-right: 30px;
 	max-width: 120px;
 }
 
@@ -368,6 +375,14 @@ a .circlebtn {
 		width: 350px !important;
 	}
 
+	#rtlogo {
+		width: 350px !important;
+	}
+
+	#ielogo {
+		width: 350px !important;
+	}
+
 	#cubeslogo {
 		padding-top: 40px;
 	}
@@ -382,6 +397,15 @@ a .circlebtn {
 	#amexlogo {
 		max-width: 150px;
 		margin-top: 30px;
+	}
+
+	#chwylogo {
+		margin-top: 5px;
+		margin-bottom: 20px;
+	}
+
+	#linlogo {
+		margin-bottom: 30px;
 	}
 }
 
@@ -1735,7 +1759,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
 	color: #6C9668 !important;
 }
 
