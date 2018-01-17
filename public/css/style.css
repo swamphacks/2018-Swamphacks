@@ -1754,12 +1754,13 @@ body {
 	z-index: 10000;
 	width: 100%;
 	height: 100%;
-	font-size: 4em;
+	font-size: 3em;
 	font-family: 'Poppins', sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: #6C9668 !important;
+	padding: 30px;
 }
 
 .success-form {
