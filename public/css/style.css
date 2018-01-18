@@ -310,6 +310,10 @@ a .circlebtn {
 	margin-top: -20px;
 }
 
+#kindlogo {
+	padding-left: 30px;
+}
+
 #microsoftimg {
 	margin-right: 20px;
 }
@@ -384,6 +388,12 @@ a .circlebtn {
 	}
 
 	#cubeslogo {
+		padding-top: 40px;
+	}
+
+	#kindlogo {
+		padding-left: 20px;
+		padding-right: 20px;
 		padding-top: 40px;
 	}
 
